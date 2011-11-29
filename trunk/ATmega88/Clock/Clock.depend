@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1284367881 source:d:\my documents\work\avr\atmega88\clock\ds1307.c
+	<avr\io.h>
+	<avr\interrupt.h>
+	"ds1307.h"
+
+1232623417 d:\my documents\work\avr\atmega88\clock\ds1307.h
+	<avr\io.h>
+
