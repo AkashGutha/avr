@@ -1,0 +1,680 @@
+Archive member included because of file (symbol)
+
+c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_mulsi3.o)
+                              ds18x20.o (__mulsi3)
+c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_divmodhi4.o)
+                              ds18x20.o (__divmodhi4)
+c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_divmodsi4.o)
+                              ds18x20.o (__divmodsi4)
+c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_exit.o)
+                              c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4/crtm88.o (exit)
+c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_copy_data.o)
+                              ds18x20.o (__do_copy_data)
+c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_clear_bss.o)
+                              uart.o (__do_clear_bss)
+c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_udivmodhi4.o)
+                              c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_divmodhi4.o) (__udivmodhi4)
+c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_udivmodsi4.o)
+                              c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_divmodsi4.o) (__udivmodsi4)
+c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4\libc.a(itoa.o)
+                              ds18x20.o (itoa)
+c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4\libc.a(ltoa.o)
+                              uart_addon.o (ltoa)
+c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4\libc.a(utoa.o)
+                              uart_addon.o (utoa)
+c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4\libc.a(strrev.o)
+                              c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4\libc.a(itoa.o) (strrev)
+
+Allocating common symbols
+Common symbol       size              file
+
+OW_OUT              0x2               onewire.o
+OW_PIN_MASK         0x1               onewire.o
+OW_IN               0x2               onewire.o
+OW_DDR              0x2               onewire.o
+gSensorIDs          0x28              main.o
+
+Discarded input sections
+
+ .data          0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4/crtm88.o
+ .bss           0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4/crtm88.o
+ .text          0x00000000        0x0 uart.o
+ .data          0x00000000        0x0 uart.o
+ .bss           0x00000000        0x0 uart.o
+ .text.uart_getc
+                0x00000000        0x0 uart.o
+ .text          0x00000000        0x0 crc8.o
+ .data          0x00000000        0x0 crc8.o
+ .bss           0x00000000        0x0 crc8.o
+ .text          0x00000000        0x0 ds18x20.o
+ .bss           0x00000000        0x0 ds18x20.o
+ .text.DS18X20_conversion_in_progress
+                0x00000000        0x0 ds18x20.o
+ .text.DS18X20_read_maxres_single
+                0x00000000        0x0 ds18x20.o
+ .text          0x00000000        0x0 main.o
+ .data          0x00000000        0x0 main.o
+ .bss           0x00000000        0x0 main.o
+ .text          0x00000000        0x0 onewire.o
+ .data          0x00000000        0x0 onewire.o
+ .bss           0x00000000        0x0 onewire.o
+ .text          0x00000000        0x0 uart_addon.o
+ .data          0x00000000        0x0 uart_addon.o
+ .bss           0x00000000        0x0 uart_addon.o
+ .text.uart_putbin_byte
+                0x00000000        0x0 uart_addon.o
+ .text.uart_puthex_long
+                0x00000000        0x0 uart_addon.o
+ .text.uart_put_ulongint
+                0x00000000        0x0 uart_addon.o
+ .text          0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_mulsi3.o)
+ .data          0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_mulsi3.o)
+ .bss           0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_mulsi3.o)
+ .text          0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_divmodhi4.o)
+ .data          0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_divmodhi4.o)
+ .bss           0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_divmodhi4.o)
+ .text          0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_divmodsi4.o)
+ .data          0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_divmodsi4.o)
+ .bss           0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_divmodsi4.o)
+ .text          0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_exit.o)
+ .data          0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_exit.o)
+ .bss           0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_exit.o)
+ .text.libgcc   0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_copy_data.o)
+ .data          0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_copy_data.o)
+ .bss           0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_copy_data.o)
+ .text          0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_clear_bss.o)
+ .data          0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_clear_bss.o)
+ .bss           0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_clear_bss.o)
+ .text          0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_udivmodhi4.o)
+ .data          0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_udivmodhi4.o)
+ .bss           0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_udivmodhi4.o)
+ .text          0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_udivmodsi4.o)
+ .data          0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_udivmodsi4.o)
+ .bss           0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_udivmodsi4.o)
+ .data          0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4\libc.a(itoa.o)
+ .bss           0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4\libc.a(itoa.o)
+ .data          0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4\libc.a(ltoa.o)
+ .bss           0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4\libc.a(ltoa.o)
+ .text          0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4\libc.a(utoa.o)
+ .data          0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4\libc.a(utoa.o)
+ .bss           0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4\libc.a(utoa.o)
+ .data          0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4\libc.a(strrev.o)
+ .bss           0x00000000        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4\libc.a(strrev.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00002000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4/crtm88.o
+LOAD uart.o
+LOAD crc8.o
+LOAD ds18x20.o
+LOAD main.o
+LOAD onewire.o
+LOAD uart_addon.o
+LOAD c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4\libm.a
+LOAD c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a
+LOAD c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4\libc.a
+LOAD c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x1d12
+ *(.vectors)
+ .vectors       0x00000000       0x34 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4/crtm88.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x00000034      0x1bd ds18x20.o
+ .progmem.data  0x000001f1      0x43b main.o
+                0x0000062c                . = ALIGN (0x2)
+                0x0000062c                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000062c        0x0 linker stubs
+ *(.trampolines*)
+                0x0000062c                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000062c                __ctors_start = .
+ *(.ctors)
+                0x0000062c                __ctors_end = .
+                0x0000062c                __dtors_start = .
+ *(.dtors)
+                0x0000062c                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000062c        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4/crtm88.o
+                0x0000062c                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000062c        0xc c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4/crtm88.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000638       0x16 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_copy_data.o)
+                0x00000638                __do_copy_data
+ .init4         0x0000064e       0x10 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_clear_bss.o)
+                0x0000064e                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x0000065e        0x4 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4/crtm88.o
+ *(.init9)
+ *(.text)
+ .text          0x00000662        0x2 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4/crtm88.o
+                0x00000662                __vector_22
+                0x00000662                __vector_1
+                0x00000662                __vector_24
+                0x00000662                __vector_12
+                0x00000662                __bad_interrupt
+                0x00000662                __vector_6
+                0x00000662                __vector_3
+                0x00000662                __vector_23
+                0x00000662                __vector_25
+                0x00000662                __vector_11
+                0x00000662                __vector_13
+                0x00000662                __vector_17
+                0x00000662                __vector_7
+                0x00000662                __vector_5
+                0x00000662                __vector_4
+                0x00000662                __vector_9
+                0x00000662                __vector_2
+                0x00000662                __vector_21
+                0x00000662                __vector_15
+                0x00000662                __vector_8
+                0x00000662                __vector_14
+                0x00000662                __vector_10
+                0x00000662                __vector_16
+                0x00000662                __vector_20
+ .text          0x00000664       0x3e c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4\libc.a(itoa.o)
+                0x00000664                itoa
+ .text          0x000006a2       0x64 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4\libc.a(ltoa.o)
+                0x000006a2                ltoa
+ .text          0x00000706       0x20 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4\libc.a(strrev.o)
+                0x00000706                strrev
+                0x00000726                . = ALIGN (0x2)
+ *(.text.*)
+ .text.__vector_18
+                0x00000726       0x58 uart.o
+                0x00000726                __vector_18
+ .text.__vector_19
+                0x0000077e       0x54 uart.o
+                0x0000077e                __vector_19
+ .text.uart_init
+                0x000007d2       0x34 uart.o
+                0x000007d2                uart_init
+ .text.uart_putc
+                0x00000806       0x2c uart.o
+                0x00000806                uart_putc
+ .text.uart_puts
+                0x00000832       0x18 uart.o
+                0x00000832                uart_puts
+ .text.uart_puts_p
+                0x0000084a       0x1a uart.o
+                0x0000084a                uart_puts_p
+ .text.crc8     0x00000864       0x40 crc8.o
+                0x00000864                crc8
+ .text.DS18X20_raw_to_decicelsius
+                0x000008a4       0xda ds18x20.o
+ .text.DS18X20_raw_to_maxres
+                0x0000097e       0xd0 ds18x20.o
+ .text.DS18X20_get_power_status
+                0x00000a4e       0x22 ds18x20.o
+                0x00000a4e                DS18X20_get_power_status
+ .text.DS18X20_eeprom_to_scratchpad
+                0x00000a70       0x44 ds18x20.o
+                0x00000a70                DS18X20_eeprom_to_scratchpad
+ .text.DS18X20_start_meas
+                0x00000ab4       0x38 ds18x20.o
+                0x00000ab4                DS18X20_start_meas
+ .text.DS18X20_scratchpad_to_eeprom
+                0x00000aec       0x46 ds18x20.o
+                0x00000aec                DS18X20_scratchpad_to_eeprom
+ .text.read_scratchpad
+                0x00000b32       0x4c ds18x20.o
+ .text.DS18X20_read_scratchpad
+                0x00000b7e       0x36 ds18x20.o
+                0x00000b7e                DS18X20_read_scratchpad
+ .text.DS18X20_read_maxres
+                0x00000bb4       0x72 ds18x20.o
+                0x00000bb4                DS18X20_read_maxres
+ .text.DS18X20_read_decicelsius_single
+                0x00000c26       0x68 ds18x20.o
+                0x00000c26                DS18X20_read_decicelsius_single
+ .text.DS18X20_read_decicelsius
+                0x00000c8e       0x6e ds18x20.o
+                0x00000c8e                DS18X20_read_decicelsius
+ .text.DS18X20_write_scratchpad
+                0x00000cfc       0x4e ds18x20.o
+                0x00000cfc                DS18X20_write_scratchpad
+ .text.DS18X20_format_from_maxres
+                0x00000d4a      0x172 ds18x20.o
+                0x00000d4a                DS18X20_format_from_maxres
+ .text.DS18X20_format_from_decicelsius
+                0x00000ebc       0xee ds18x20.o
+                0x00000ebc                DS18X20_format_from_decicelsius
+ .text.DS18X20_find_sensor
+                0x00000faa       0x3c ds18x20.o
+                0x00000faa                DS18X20_find_sensor
+ .text.DS18X20_show_id_uart
+                0x00000fe6       0xb2 ds18x20.o
+                0x00000fe6                DS18X20_show_id_uart
+ .text.DS18X20_read_meas_all_verbose
+                0x00001098      0x2d6 ds18x20.o
+                0x00001098                DS18X20_read_meas_all_verbose
+ .text.th_tl_dump
+                0x0000136e       0x38 main.o
+ .text.uart_put_temp
+                0x000013a6       0x50 main.o
+ .text.search_sensors
+                0x000013f6       0xc6 main.o
+ .text.main     0x000014bc      0x3c6 main.o
+                0x000014bc                main
+ .text.ow_input_pin_state
+                0x00001882       0x12 onewire.o
+                0x00001882                ow_input_pin_state
+ .text.ow_parasite_enable
+                0x00001894       0x26 onewire.o
+                0x00001894                ow_parasite_enable
+ .text.ow_parasite_disable
+                0x000018ba       0x16 onewire.o
+                0x000018ba                ow_parasite_disable
+ .text.ow_reset
+                0x000018d0       0x94 onewire.o
+                0x000018d0                ow_reset
+ .text.ow_set_bus
+                0x00001964       0x2e onewire.o
+                0x00001964                ow_set_bus
+ .text.ow_bit_io_intern
+                0x00001992       0xb6 onewire.o
+ .text.ow_bit_io
+                0x00001a48        0x8 onewire.o
+                0x00001a48                ow_bit_io
+ .text.ow_byte_wr
+                0x00001a50       0x20 onewire.o
+                0x00001a50                ow_byte_wr
+ .text.ow_byte_wr_with_parasite_enable
+                0x00001a70       0x2a onewire.o
+                0x00001a70                ow_byte_wr_with_parasite_enable
+ .text.ow_byte_rd
+                0x00001a9a        0x6 onewire.o
+                0x00001a9a                ow_byte_rd
+ .text.ow_rom_search
+                0x00001aa0       0x8e onewire.o
+                0x00001aa0                ow_rom_search
+ .text.ow_command_intern
+                0x00001b2e       0x44 onewire.o
+ .text.ow_command
+                0x00001b72        0x6 onewire.o
+                0x00001b72                ow_command
+ .text.ow_command_with_parasite_enable
+                0x00001b78        0x6 onewire.o
+                0x00001b78                ow_command_with_parasite_enable
+ .text.uart_puthex_nibble
+                0x00001b7e       0x10 uart_addon.o
+                0x00001b7e                uart_puthex_nibble
+ .text.uart_puthex_byte
+                0x00001b8e       0x12 uart_addon.o
+                0x00001b8e                uart_puthex_byte
+ .text.uart_put_longint
+                0x00001ba0       0x34 uart_addon.o
+                0x00001ba0                uart_put_longint
+ .text.uart_put_int
+                0x00001bd4       0x34 uart_addon.o
+                0x00001bd4                uart_put_int
+ .text.libgcc   0x00001c08       0x3e c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_mulsi3.o)
+                0x00001c08                __mulsi3
+ .text.libgcc   0x00001c46       0x26 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_divmodhi4.o)
+                0x00001c46                __divmodhi4
+                0x00001c46                _div
+ .text.libgcc   0x00001c6c       0x36 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_divmodsi4.o)
+                0x00001c6c                __divmodsi4
+ .text.libgcc   0x00001ca2       0x28 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_udivmodhi4.o)
+                0x00001ca2                __udivmodhi4
+ .text.libgcc   0x00001cca       0x44 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_udivmodsi4.o)
+                0x00001cca                __udivmodsi4
+                0x00001d0e                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00001d0e        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_exit.o)
+                0x00001d0e                exit
+                0x00001d0e                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00001d0e        0x4 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00001d12                _etext = .
+
+.data           0x00800100        0x2 load address 0x00001d12
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x2 ds18x20.o
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800102                . = ALIGN (0x2)
+                0x00800102                _edata = .
+                0x00800102                PROVIDE (__data_end, .)
+
+.bss            0x00800102       0x74
+                0x00800102                PROVIDE (__bss_start, .)
+ *(.bss)
+ *(.bss*)
+ .bss.UART_TxBuf
+                0x00800102       0x20 uart.o
+ .bss.UART_RxBuf
+                0x00800122       0x20 uart.o
+ .bss.UART_TxHead
+                0x00800142        0x1 uart.o
+ .bss.UART_TxTail
+                0x00800143        0x1 uart.o
+ .bss.UART_RxHead
+                0x00800144        0x1 uart.o
+ .bss.UART_RxTail
+                0x00800145        0x1 uart.o
+ .bss.UART_LastRxError
+                0x00800146        0x1 uart.o
+ *(COMMON)
+ COMMON         0x00800147       0x28 main.o
+                0x00800147                gSensorIDs
+ COMMON         0x0080016f        0x7 onewire.o
+                0x0080016f                OW_OUT
+                0x00800171                OW_PIN_MASK
+                0x00800172                OW_IN
+                0x00800174                OW_DDR
+                0x00800176                PROVIDE (__bss_end, .)
+                0x00001d12                __data_load_start = LOADADDR (.data)
+                0x00001d14                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800176        0x0
+                0x00800176                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800176                PROVIDE (__noinit_end, .)
+                0x00800176                _end = .
+                0x00800176                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x230
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x50 uart.o
+ .debug_aranges
+                0x00000050       0x20 crc8.o
+ .debug_aranges
+                0x00000070       0xb0 ds18x20.o
+ .debug_aranges
+                0x00000120       0x38 main.o
+ .debug_aranges
+                0x00000158       0x88 onewire.o
+ .debug_aranges
+                0x000001e0       0x50 uart_addon.o
+
+.debug_pubnames
+                0x00000000      0x48e
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x7a uart.o
+ .debug_pubnames
+                0x0000007a       0x1b crc8.o
+ .debug_pubnames
+                0x00000095      0x1f2 ds18x20.o
+ .debug_pubnames
+                0x00000287       0x2a main.o
+ .debug_pubnames
+                0x000002b1      0x139 onewire.o
+ .debug_pubnames
+                0x000003ea       0xa4 uart_addon.o
+
+.debug_info     0x00000000     0x2681
+ *(.debug_info)
+ .debug_info    0x00000000      0x2c9 uart.o
+ .debug_info    0x000002c9      0x102 crc8.o
+ .debug_info    0x000003cb      0xf1a ds18x20.o
+ .debug_info    0x000012e5      0xab1 main.o
+ .debug_info    0x00001d96      0x6ff onewire.o
+ .debug_info    0x00002495      0x1ec uart_addon.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0x94b
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x131 uart.o
+ .debug_abbrev  0x00000131       0xa6 crc8.o
+ .debug_abbrev  0x000001d7      0x27f ds18x20.o
+ .debug_abbrev  0x00000456      0x21c main.o
+ .debug_abbrev  0x00000672      0x233 onewire.o
+ .debug_abbrev  0x000008a5       0xa6 uart_addon.o
+
+.debug_line     0x00000000     0x1b4e
+ *(.debug_line)
+ .debug_line    0x00000000      0x27f uart.o
+ .debug_line    0x0000027f      0x10b crc8.o
+ .debug_line    0x0000038a      0xa90 ds18x20.o
+ .debug_line    0x00000e1a      0x64c main.o
+ .debug_line    0x00001466      0x546 onewire.o
+ .debug_line    0x000019ac      0x1a2 uart_addon.o
+
+.debug_frame    0x00000000      0x3a0
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x80 uart.o
+ .debug_frame   0x00000080       0x20 crc8.o
+ .debug_frame   0x000000a0      0x140 ds18x20.o
+ .debug_frame   0x000001e0       0x50 main.o
+ .debug_frame   0x00000230       0xf0 onewire.o
+ .debug_frame   0x00000320       0x80 uart_addon.o
+
+.debug_str      0x00000000      0x70f
+ *(.debug_str)
+ .debug_str     0x00000000      0x168 uart.o
+                                0x1a6 (size before relaxing)
+ .debug_str     0x00000168       0x4b crc8.o
+                                 0xfe (size before relaxing)
+ .debug_str     0x000001b3      0x2f9 ds18x20.o
+                                0x3ec (size before relaxing)
+ .debug_str     0x000004ac       0x76 main.o
+                                0x192 (size before relaxing)
+ .debug_str     0x00000522      0x167 onewire.o
+                                0x271 (size before relaxing)
+ .debug_str     0x00000689       0x86 uart_addon.o
+                                0x12f (size before relaxing)
+
+.debug_loc      0x00000000     0x1458
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x164 uart.o
+ .debug_loc     0x00000164       0x46 crc8.o
+ .debug_loc     0x000001aa      0xbbd ds18x20.o
+ .debug_loc     0x00000d67      0x264 main.o
+ .debug_loc     0x00000fcb      0x37d onewire.o
+ .debug_loc     0x00001348      0x110 uart_addon.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(ds1820_demo.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000      0x350
+ .debug_ranges  0x00000000       0x48 uart.o
+ .debug_ranges  0x00000048       0x18 crc8.o
+ .debug_ranges  0x00000060      0x110 ds18x20.o
+ .debug_ranges  0x00000170      0x100 main.o
+ .debug_ranges  0x00000270       0x98 onewire.o
+ .debug_ranges  0x00000308       0x48 uart_addon.o
