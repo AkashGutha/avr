@@ -1,0 +1,1724 @@
+
+Clock.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000850  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000020  00800060  00000850  000008e4  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          0000000c  00800080  00800080  00000904  2**0
+                  ALLOC
+  3 .debug_aranges 00000040  00000000  00000000  00000904  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_pubnames 000001ff  00000000  00000000  00000944  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000007d9  00000000  00000000  00000b43  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000324  00000000  00000000  0000131c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000008bd  00000000  00000000  00001640  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000180  00000000  00000000  00001f00  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000001fd  00000000  00000000  00002080  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000001df  00000000  00000000  0000227d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000090  00000000  00000000  0000245c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	24 c0       	rjmp	.+72     	; 0x4a <__ctors_end>
+   2:	3e c0       	rjmp	.+124    	; 0x80 <__bad_interrupt>
+   4:	de c1       	rjmp	.+956    	; 0x3c2 <__vector_2>
+   6:	3c c0       	rjmp	.+120    	; 0x80 <__bad_interrupt>
+   8:	3b c0       	rjmp	.+118    	; 0x80 <__bad_interrupt>
+   a:	3a c0       	rjmp	.+116    	; 0x80 <__bad_interrupt>
+   c:	18 c1       	rjmp	.+560    	; 0x23e <__vector_6>
+   e:	38 c0       	rjmp	.+112    	; 0x80 <__bad_interrupt>
+  10:	37 c0       	rjmp	.+110    	; 0x80 <__bad_interrupt>
+  12:	eb c0       	rjmp	.+470    	; 0x1ea <__vector_9>
+  14:	35 c0       	rjmp	.+106    	; 0x80 <__bad_interrupt>
+  16:	34 c0       	rjmp	.+104    	; 0x80 <__bad_interrupt>
+  18:	33 c0       	rjmp	.+102    	; 0x80 <__bad_interrupt>
+  1a:	32 c0       	rjmp	.+100    	; 0x80 <__bad_interrupt>
+  1c:	31 c0       	rjmp	.+98     	; 0x80 <__bad_interrupt>
+  1e:	30 c0       	rjmp	.+96     	; 0x80 <__bad_interrupt>
+  20:	2f c0       	rjmp	.+94     	; 0x80 <__bad_interrupt>
+  22:	2e c0       	rjmp	.+92     	; 0x80 <__bad_interrupt>
+  24:	2d c0       	rjmp	.+90     	; 0x80 <__bad_interrupt>
+  26:	92 c1       	rjmp	.+804    	; 0x34c <__vector_6+0x10e>
+  28:	97 c1       	rjmp	.+814    	; 0x358 <__vector_6+0x11a>
+  2a:	90 c1       	rjmp	.+800    	; 0x34c <__vector_6+0x10e>
+  2c:	92 c1       	rjmp	.+804    	; 0x352 <__vector_6+0x114>
+  2e:	8e c1       	rjmp	.+796    	; 0x34c <__vector_6+0x10e>
+  30:	90 c1       	rjmp	.+800    	; 0x352 <__vector_6+0x114>
+  32:	8c c1       	rjmp	.+792    	; 0x34c <__vector_6+0x10e>
+  34:	8b c1       	rjmp	.+790    	; 0x34c <__vector_6+0x10e>
+  36:	8d c1       	rjmp	.+794    	; 0x352 <__vector_6+0x114>
+  38:	8f c1       	rjmp	.+798    	; 0x358 <__vector_6+0x11a>
+  3a:	8e c1       	rjmp	.+796    	; 0x358 <__vector_6+0x11a>
+  3c:	8d c1       	rjmp	.+794    	; 0x358 <__vector_6+0x11a>
+  3e:	8c c1       	rjmp	.+792    	; 0x358 <__vector_6+0x11a>
+  40:	8b c1       	rjmp	.+790    	; 0x358 <__vector_6+0x11a>
+  42:	8a c1       	rjmp	.+788    	; 0x358 <__vector_6+0x11a>
+  44:	83 c1       	rjmp	.+774    	; 0x34c <__vector_6+0x10e>
+  46:	85 c1       	rjmp	.+778    	; 0x352 <__vector_6+0x114>
+  48:	81 c1       	rjmp	.+770    	; 0x34c <__vector_6+0x10e>
+
+0000004a <__ctors_end>:
+  4a:	11 24       	eor	r1, r1
+  4c:	1f be       	out	0x3f, r1	; 63
+  4e:	cf e5       	ldi	r28, 0x5F	; 95
+  50:	d4 e0       	ldi	r29, 0x04	; 4
+  52:	de bf       	out	0x3e, r29	; 62
+  54:	cd bf       	out	0x3d, r28	; 61
+
+00000056 <__do_copy_data>:
+  56:	10 e0       	ldi	r17, 0x00	; 0
+  58:	a0 e6       	ldi	r26, 0x60	; 96
+  5a:	b0 e0       	ldi	r27, 0x00	; 0
+  5c:	e0 e5       	ldi	r30, 0x50	; 80
+  5e:	f8 e0       	ldi	r31, 0x08	; 8
+  60:	02 c0       	rjmp	.+4      	; 0x66 <.do_copy_data_start>
+
+00000062 <.do_copy_data_loop>:
+  62:	05 90       	lpm	r0, Z+
+  64:	0d 92       	st	X+, r0
+
+00000066 <.do_copy_data_start>:
+  66:	a0 38       	cpi	r26, 0x80	; 128
+  68:	b1 07       	cpc	r27, r17
+  6a:	d9 f7       	brne	.-10     	; 0x62 <.do_copy_data_loop>
+
+0000006c <__do_clear_bss>:
+  6c:	10 e0       	ldi	r17, 0x00	; 0
+  6e:	a0 e8       	ldi	r26, 0x80	; 128
+  70:	b0 e0       	ldi	r27, 0x00	; 0
+  72:	01 c0       	rjmp	.+2      	; 0x76 <.do_clear_bss_start>
+
+00000074 <.do_clear_bss_loop>:
+  74:	1d 92       	st	X+, r1
+
+00000076 <.do_clear_bss_start>:
+  76:	ac 38       	cpi	r26, 0x8C	; 140
+  78:	b1 07       	cpc	r27, r17
+  7a:	e1 f7       	brne	.-8      	; 0x74 <.do_clear_bss_loop>
+  7c:	ee d1       	rcall	.+988    	; 0x45a <main>
+  7e:	e6 c3       	rjmp	.+1996   	; 0x84c <_exit>
+
+00000080 <__bad_interrupt>:
+  80:	bf cf       	rjmp	.-130    	; 0x0 <__vectors>
+
+00000082 <to_bcd>:
+char tick = 0;
+
+clock_buffer clock = {0};
+
+char to_bcd(char nr)
+{
+  82:	48 2f       	mov	r20, r24
+  84:	6a e0       	ldi	r22, 0x0A	; 10
+  86:	d6 d3       	rcall	.+1964   	; 0x834 <__udivmodqi4>
+  88:	28 2f       	mov	r18, r24
+  8a:	30 e0       	ldi	r19, 0x00	; 0
+  8c:	84 e0       	ldi	r24, 0x04	; 4
+  8e:	22 0f       	add	r18, r18
+  90:	33 1f       	adc	r19, r19
+  92:	8a 95       	dec	r24
+  94:	e1 f7       	brne	.-8      	; 0x8e <to_bcd+0xc>
+  96:	84 2f       	mov	r24, r20
+  98:	cd d3       	rcall	.+1946   	; 0x834 <__udivmodqi4>
+  return ( ((nr/10)<<4) | (nr%10) );
+}
+  9a:	89 2f       	mov	r24, r25
+  9c:	82 2b       	or	r24, r18
+  9e:	08 95       	ret
+
+000000a0 <from_bcd>:
+
+char from_bcd(char nr)
+{
+  a0:	28 2f       	mov	r18, r24
+  a2:	22 95       	swap	r18
+  a4:	2f 70       	andi	r18, 0x0F	; 15
+  a6:	9a e0       	ldi	r25, 0x0A	; 10
+  a8:	29 9f       	mul	r18, r25
+  aa:	90 01       	movw	r18, r0
+  ac:	11 24       	eor	r1, r1
+  ae:	8f 70       	andi	r24, 0x0F	; 15
+  return ( ((nr>>4)*10) + (nr & 0x0F) );
+}
+  b0:	82 0f       	add	r24, r18
+  b2:	08 95       	ret
+
+000000b4 <bcd_inc>:
+
+char bcd_inc(char nr)
+{
+  nr++;
+  b4:	98 2f       	mov	r25, r24
+  b6:	9f 5f       	subi	r25, 0xFF	; 255
+  if((nr & 0x0F) == 0x0A)
+  b8:	89 2f       	mov	r24, r25
+  ba:	8f 70       	andi	r24, 0x0F	; 15
+  bc:	8a 30       	cpi	r24, 0x0A	; 10
+  be:	09 f4       	brne	.+2      	; 0xc2 <bcd_inc+0xe>
+    nr += 6;
+  c0:	9a 5f       	subi	r25, 0xFA	; 250
+  if(nr > 99)
+  c2:	94 36       	cpi	r25, 0x64	; 100
+  c4:	08 f0       	brcs	.+2      	; 0xc8 <bcd_inc+0x14>
+  c6:	90 e0       	ldi	r25, 0x00	; 0
+    nr = 0;
+  return nr;
+}
+  c8:	89 2f       	mov	r24, r25
+  ca:	08 95       	ret
+
+000000cc <bcd_dec>:
+
+char bcd_dec(char nr)
+{
+  nr--;
+  cc:	98 2f       	mov	r25, r24
+  ce:	91 50       	subi	r25, 0x01	; 1
+  if((nr & 0x0F) == 0x0F)
+  d0:	89 2f       	mov	r24, r25
+  d2:	8f 70       	andi	r24, 0x0F	; 15
+  d4:	8f 30       	cpi	r24, 0x0F	; 15
+  d6:	09 f4       	brne	.+2      	; 0xda <bcd_dec+0xe>
+    nr -= 6;
+  d8:	96 50       	subi	r25, 0x06	; 6
+  if(nr > 99)
+  da:	94 36       	cpi	r25, 0x64	; 100
+  dc:	08 f0       	brcs	.+2      	; 0xe0 <bcd_dec+0x14>
+  de:	90 e0       	ldi	r25, 0x00	; 0
+    nr = 0;
+  return nr;
+}
+  e0:	89 2f       	mov	r24, r25
+  e2:	08 95       	ret
+
+000000e4 <set_display>:
+
+void set_display(char set)
+{
+  switch(set)
+  e4:	88 23       	and	r24, r24
+  e6:	21 f0       	breq	.+8      	; 0xf0 <set_display+0xc>
+  e8:	81 30       	cpi	r24, 0x01	; 1
+  ea:	09 f0       	breq	.+2      	; 0xee <set_display+0xa>
+  ec:	4e c0       	rjmp	.+156    	; 0x18a <set_display+0xa6>
+  ee:	27 c0       	rjmp	.+78     	; 0x13e <set_display+0x5a>
+  {
+    case DISPLAY_TIME :
+      display[0] = nr[(clock.hours >> 4)];
+  f0:	a0 91 86 00 	lds	r26, 0x0086
+  f4:	ea 2f       	mov	r30, r26
+  f6:	e2 95       	swap	r30
+  f8:	ef 70       	andi	r30, 0x0F	; 15
+  fa:	f0 e0       	ldi	r31, 0x00	; 0
+  fc:	e9 59       	subi	r30, 0x99	; 153
+  fe:	ff 4f       	sbci	r31, 0xFF	; 255
+ 100:	80 81       	ld	r24, Z
+ 102:	80 93 7b 00 	sts	0x007B, r24
+      display[1] = nr[(clock.hours & 0xF)];
+ 106:	b0 e0       	ldi	r27, 0x00	; 0
+ 108:	af 70       	andi	r26, 0x0F	; 15
+ 10a:	b0 70       	andi	r27, 0x00	; 0
+ 10c:	a9 59       	subi	r26, 0x99	; 153
+ 10e:	bf 4f       	sbci	r27, 0xFF	; 255
+ 110:	8c 91       	ld	r24, X
+ 112:	80 93 7c 00 	sts	0x007C, r24
+      display[2] = nr[(clock.minutes >> 4)];
+ 116:	a0 91 85 00 	lds	r26, 0x0085
+ 11a:	ea 2f       	mov	r30, r26
+ 11c:	e2 95       	swap	r30
+ 11e:	ef 70       	andi	r30, 0x0F	; 15
+ 120:	f0 e0       	ldi	r31, 0x00	; 0
+ 122:	e9 59       	subi	r30, 0x99	; 153
+ 124:	ff 4f       	sbci	r31, 0xFF	; 255
+ 126:	80 81       	ld	r24, Z
+ 128:	80 93 7d 00 	sts	0x007D, r24
+      display[3] = nr[(clock.minutes & 0xF)];
+ 12c:	b0 e0       	ldi	r27, 0x00	; 0
+ 12e:	af 70       	andi	r26, 0x0F	; 15
+ 130:	b0 70       	andi	r27, 0x00	; 0
+ 132:	a9 59       	subi	r26, 0x99	; 153
+ 134:	bf 4f       	sbci	r27, 0xFF	; 255
+ 136:	8c 91       	ld	r24, X
+ 138:	80 93 7e 00 	sts	0x007E, r24
+ 13c:	08 95       	ret
+      break;
+    case DISPLAY_DATE :
+      display[0] = nr[(clock.date >> 4)];
+ 13e:	a0 91 88 00 	lds	r26, 0x0088
+ 142:	ea 2f       	mov	r30, r26
+ 144:	e2 95       	swap	r30
+ 146:	ef 70       	andi	r30, 0x0F	; 15
+ 148:	f0 e0       	ldi	r31, 0x00	; 0
+ 14a:	e9 59       	subi	r30, 0x99	; 153
+ 14c:	ff 4f       	sbci	r31, 0xFF	; 255
+ 14e:	80 81       	ld	r24, Z
+ 150:	80 93 7b 00 	sts	0x007B, r24
+      display[1] = nr[(clock.date & 0xF)];
+ 154:	b0 e0       	ldi	r27, 0x00	; 0
+ 156:	af 70       	andi	r26, 0x0F	; 15
+ 158:	b0 70       	andi	r27, 0x00	; 0
+ 15a:	a9 59       	subi	r26, 0x99	; 153
+ 15c:	bf 4f       	sbci	r27, 0xFF	; 255
+ 15e:	8c 91       	ld	r24, X
+ 160:	80 93 7c 00 	sts	0x007C, r24
+      display[2] = nr[(clock.month >> 4)];
+ 164:	a0 91 89 00 	lds	r26, 0x0089
+ 168:	ea 2f       	mov	r30, r26
+ 16a:	e2 95       	swap	r30
+ 16c:	ef 70       	andi	r30, 0x0F	; 15
+ 16e:	f0 e0       	ldi	r31, 0x00	; 0
+ 170:	e9 59       	subi	r30, 0x99	; 153
+ 172:	ff 4f       	sbci	r31, 0xFF	; 255
+ 174:	80 81       	ld	r24, Z
+ 176:	80 93 7d 00 	sts	0x007D, r24
+      display[3] = nr[(clock.month & 0xF)];
+ 17a:	b0 e0       	ldi	r27, 0x00	; 0
+ 17c:	af 70       	andi	r26, 0x0F	; 15
+ 17e:	b0 70       	andi	r27, 0x00	; 0
+ 180:	a9 59       	subi	r26, 0x99	; 153
+ 182:	bf 4f       	sbci	r27, 0xFF	; 255
+ 184:	8c 91       	ld	r24, X
+ 186:	80 93 7e 00 	sts	0x007E, r24
+ 18a:	08 95       	ret
+
+0000018c <init>:
+
+void init()
+{
+  // PORTS
+  
+  DDRB   = 0xFF;                    // PORTB = out
+ 18c:	8f ef       	ldi	r24, 0xFF	; 255
+ 18e:	87 bb       	out	0x17, r24	; 23
+  PORTB  = 0xFF;
+ 190:	88 bb       	out	0x18, r24	; 24
+  DDRD   = 0xF7;                    // PORTD : INT1 in, the rest out.
+ 192:	87 ef       	ldi	r24, 0xF7	; 247
+ 194:	81 bb       	out	0x11, r24	; 17
+  DDRC   = 0x00;                    // PORTC = in
+ 196:	14 ba       	out	0x14, r1	; 20
+  PORTC  = (1<<4) | (1<<5);         // Enable internal pull-ups on SDA and SCL
+ 198:	80 e3       	ldi	r24, 0x30	; 48
+ 19a:	85 bb       	out	0x15, r24	; 21
+  
+  // EXTERNAL INTERRUPTS
+
+  asm("cli"); 
+ 19c:	f8 94       	cli
+  MCUCR = 0x0E;           // Set INT1 sense control
+ 19e:	8e e0       	ldi	r24, 0x0E	; 14
+ 1a0:	85 bf       	out	0x35, r24	; 53
+  //MCUCR |= (1<<1)|(0<<0);           // Set INT0 sense control
+  MCUCR = 0x0E;
+ 1a2:	85 bf       	out	0x35, r24	; 53
+  GICR  |= (1<<6)|(1<<7);           // Enable external INT0, INT1
+ 1a4:	8b b7       	in	r24, 0x3b	; 59
+ 1a6:	80 6c       	ori	r24, 0xC0	; 192
+ 1a8:	8b bf       	out	0x3b, r24	; 59
+
+  // TIMER 0 - used for multiplexing the display
+
+  TIMSK |= (1<<TOIE0);          // set TIMER0 overflow INT
+ 1aa:	89 b7       	in	r24, 0x39	; 57
+ 1ac:	81 60       	ori	r24, 0x01	; 1
+ 1ae:	89 bf       	out	0x39, r24	; 57
+  TCNT0 = 0xFF - count0;        // set count
+ 1b0:	80 91 60 00 	lds	r24, 0x0060
+ 1b4:	80 95       	com	r24
+ 1b6:	82 bf       	out	0x32, r24	; 50
+  TCCR0 |= prescaler0;          // start timer
+ 1b8:	83 b7       	in	r24, 0x33	; 51
+ 1ba:	90 91 61 00 	lds	r25, 0x0061
+ 1be:	89 2b       	or	r24, r25
+ 1c0:	83 bf       	out	0x33, r24	; 51
+  
+  // TIMER 1 - used for handling the keyboard
+  
+  TCCR1B = 0x00;      //stop
+ 1c2:	1e bc       	out	0x2e, r1	; 46
+  TCNT1 = 0x00;
+ 1c4:	1d bc       	out	0x2d, r1	; 45
+ 1c6:	1c bc       	out	0x2c, r1	; 44
+  OCR1A = keyboard_poll;      // set output compare A
+ 1c8:	80 91 62 00 	lds	r24, 0x0062
+ 1cc:	90 91 63 00 	lds	r25, 0x0063
+ 1d0:	9b bd       	out	0x2b, r25	; 43
+ 1d2:	8a bd       	out	0x2a, r24	; 42
+  TIMSK |= (1<<OCIE1A);      // Set output compare A interrupt
+ 1d4:	89 b7       	in	r24, 0x39	; 57
+ 1d6:	80 61       	ori	r24, 0x10	; 16
+ 1d8:	89 bf       	out	0x39, r24	; 57
+  TCCR1A = 0x00;  
+ 1da:	1f bc       	out	0x2f, r1	; 47
+  TCCR1B = prescaler1; //start Timer
+ 1dc:	80 91 66 00 	lds	r24, 0x0066
+ 1e0:	8e bd       	out	0x2e, r24	; 46
+
+  // STATUS REGISTER
+  
+  //SREG  |= (1<<7);                  // Set general interrupt flag
+  GIFR |= (0<<7);
+ 1e2:	8a b7       	in	r24, 0x3a	; 58
+ 1e4:	8a bf       	out	0x3a, r24	; 58
+  asm("sei");
+ 1e6:	78 94       	sei
+}
+ 1e8:	08 95       	ret
+
+000001ea <__vector_9>:
+    clock = rtc_read();
+  }
+}
+
+ISR(TIMER0_OVF_vect)
+{
+ 1ea:	1f 92       	push	r1
+ 1ec:	0f 92       	push	r0
+ 1ee:	0f b6       	in	r0, 0x3f	; 63
+ 1f0:	0f 92       	push	r0
+ 1f2:	11 24       	eor	r1, r1
+ 1f4:	8f 93       	push	r24
+ 1f6:	af 93       	push	r26
+ 1f8:	bf 93       	push	r27
+ 1fa:	ef 93       	push	r30
+ 1fc:	ff 93       	push	r31
+  TCNT0 = 0xFF - count0;        // reset counter
+ 1fe:	80 91 60 00 	lds	r24, 0x0060
+ 202:	80 95       	com	r24
+ 204:	82 bf       	out	0x32, r24	; 50
+  tick++;
+  tick &= 3;
+ 206:	e0 91 83 00 	lds	r30, 0x0083
+ 20a:	ef 5f       	subi	r30, 0xFF	; 255
+ 20c:	e3 70       	andi	r30, 0x03	; 3
+ 20e:	e0 93 83 00 	sts	0x0083, r30
+  
+  PORTB = 0xFF;
+ 212:	8f ef       	ldi	r24, 0xFF	; 255
+ 214:	88 bb       	out	0x18, r24	; 24
+  PORTD = mux[tick];
+ 216:	f0 e0       	ldi	r31, 0x00	; 0
+ 218:	df 01       	movw	r26, r30
+ 21a:	a9 58       	subi	r26, 0x89	; 137
+ 21c:	bf 4f       	sbci	r27, 0xFF	; 255
+ 21e:	8c 91       	ld	r24, X
+ 220:	82 bb       	out	0x12, r24	; 18
+  PORTB = display[tick];  
+ 222:	e5 58       	subi	r30, 0x85	; 133
+ 224:	ff 4f       	sbci	r31, 0xFF	; 255
+ 226:	80 81       	ld	r24, Z
+ 228:	88 bb       	out	0x18, r24	; 24
+}
+ 22a:	ff 91       	pop	r31
+ 22c:	ef 91       	pop	r30
+ 22e:	bf 91       	pop	r27
+ 230:	af 91       	pop	r26
+ 232:	8f 91       	pop	r24
+ 234:	0f 90       	pop	r0
+ 236:	0f be       	out	0x3f, r0	; 63
+ 238:	0f 90       	pop	r0
+ 23a:	1f 90       	pop	r1
+ 23c:	18 95       	reti
+
+0000023e <__vector_6>:
+
+ISR(TIMER1_COMPA_vect)
+{
+ 23e:	1f 92       	push	r1
+ 240:	0f 92       	push	r0
+ 242:	0f b6       	in	r0, 0x3f	; 63
+ 244:	0f 92       	push	r0
+ 246:	11 24       	eor	r1, r1
+ 248:	2f 93       	push	r18
+ 24a:	3f 93       	push	r19
+ 24c:	4f 93       	push	r20
+ 24e:	5f 93       	push	r21
+ 250:	6f 93       	push	r22
+ 252:	7f 93       	push	r23
+ 254:	8f 93       	push	r24
+ 256:	9f 93       	push	r25
+ 258:	af 93       	push	r26
+ 25a:	bf 93       	push	r27
+ 25c:	ef 93       	push	r30
+ 25e:	ff 93       	push	r31
+  TCNT1 = 0x00;
+ 260:	1d bc       	out	0x2d, r1	; 45
+ 262:	1c bc       	out	0x2c, r1	; 44
+  keyboard = PINC & 0x0F;
+ 264:	23 b3       	in	r18, 0x13	; 19
+ 266:	2f 70       	andi	r18, 0x0F	; 15
+ 268:	20 93 81 00 	sts	0x0081, r18
+  
+  if(keyboard == 0x0F)
+ 26c:	2f 30       	cpi	r18, 0x0F	; 15
+ 26e:	49 f4       	brne	.+18     	; 0x282 <__vector_6+0x44>
+  {
+    set_display(DISPLAY_TIME);
+ 270:	80 e0       	ldi	r24, 0x00	; 0
+ 272:	38 df       	rcall	.-400    	; 0xe4 <set_display>
+    OCR1A = keyboard_poll;
+ 274:	80 91 62 00 	lds	r24, 0x0062
+ 278:	90 91 63 00 	lds	r25, 0x0063
+ 27c:	9b bd       	out	0x2b, r25	; 43
+ 27e:	8a bd       	out	0x2a, r24	; 42
+ 280:	8f c0       	rjmp	.+286    	; 0x3a0 <__vector_6+0x162>
+  }
+  else
+  {
+    OCR1A = keyboard_delay;
+ 282:	80 91 64 00 	lds	r24, 0x0064
+ 286:	90 91 65 00 	lds	r25, 0x0065
+ 28a:	9b bd       	out	0x2b, r25	; 43
+ 28c:	8a bd       	out	0x2a, r24	; 42
+    switch(keyboard)
+ 28e:	2c 30       	cpi	r18, 0x0C	; 12
+ 290:	09 f4       	brne	.+2      	; 0x294 <__vector_6+0x56>
+ 292:	41 c0       	rjmp	.+130    	; 0x316 <__vector_6+0xd8>
+ 294:	2d 30       	cpi	r18, 0x0D	; 13
+ 296:	38 f4       	brcc	.+14     	; 0x2a6 <__vector_6+0x68>
+ 298:	2a 30       	cpi	r18, 0x0A	; 10
+ 29a:	09 f4       	brne	.+2      	; 0x29e <__vector_6+0x60>
+ 29c:	66 c0       	rjmp	.+204    	; 0x36a <__vector_6+0x12c>
+ 29e:	2b 30       	cpi	r18, 0x0B	; 11
+ 2a0:	09 f0       	breq	.+2      	; 0x2a4 <__vector_6+0x66>
+ 2a2:	7e c0       	rjmp	.+252    	; 0x3a0 <__vector_6+0x162>
+ 2a4:	20 c0       	rjmp	.+64     	; 0x2e6 <__vector_6+0xa8>
+ 2a6:	2d 30       	cpi	r18, 0x0D	; 13
+ 2a8:	31 f0       	breq	.+12     	; 0x2b6 <__vector_6+0x78>
+ 2aa:	2e 30       	cpi	r18, 0x0E	; 14
+ 2ac:	09 f0       	breq	.+2      	; 0x2b0 <__vector_6+0x72>
+ 2ae:	78 c0       	rjmp	.+240    	; 0x3a0 <__vector_6+0x162>
+    {
+      case 0x0E:  // date button pressed
+        set_display(DISPLAY_DATE);
+ 2b0:	81 e0       	ldi	r24, 0x01	; 1
+ 2b2:	18 df       	rcall	.-464    	; 0xe4 <set_display>
+ 2b4:	75 c0       	rjmp	.+234    	; 0x3a0 <__vector_6+0x162>
+        break;
+        
+      case 0x0D:
+        set_display(DISPLAY_TIME);
+ 2b6:	80 e0       	ldi	r24, 0x00	; 0
+ 2b8:	15 df       	rcall	.-470    	; 0xe4 <set_display>
+  return ( ((nr>>4)*10) + (nr & 0x0F) );
+}
+
+char bcd_inc(char nr)
+{
+  nr++;
+ 2ba:	20 91 86 00 	lds	r18, 0x0086
+ 2be:	92 2f       	mov	r25, r18
+ 2c0:	9f 5f       	subi	r25, 0xFF	; 255
+  if((nr & 0x0F) == 0x0A)
+ 2c2:	89 2f       	mov	r24, r25
+ 2c4:	8f 70       	andi	r24, 0x0F	; 15
+ 2c6:	8a 30       	cpi	r24, 0x0A	; 10
+ 2c8:	09 f4       	brne	.+2      	; 0x2cc <__vector_6+0x8e>
+    nr += 6;
+ 2ca:	9a 5f       	subi	r25, 0xFA	; 250
+  if(nr > 99)
+ 2cc:	94 36       	cpi	r25, 0x64	; 100
+ 2ce:	08 f0       	brcs	.+2      	; 0x2d2 <__vector_6+0x94>
+ 2d0:	90 e0       	ldi	r25, 0x00	; 0
+        set_display(DISPLAY_DATE);
+        break;
+        
+      case 0x0D:
+        set_display(DISPLAY_TIME);
+        clock.hours = bcd_inc(clock.hours);
+ 2d2:	90 93 86 00 	sts	0x0086, r25
+        if(clock.hours == 0x24)
+ 2d6:	94 32       	cpi	r25, 0x24	; 36
+ 2d8:	11 f4       	brne	.+4      	; 0x2de <__vector_6+0xa0>
+          clock.hours = 0;
+ 2da:	10 92 86 00 	sts	0x0086, r1
+        q = twi_write_byte(2,clock.hours);
+ 2de:	82 e0       	ldi	r24, 0x02	; 2
+ 2e0:	60 91 86 00 	lds	r22, 0x0086
+ 2e4:	5a c0       	rjmp	.+180    	; 0x39a <__vector_6+0x15c>
+        break;
+
+      case 0x0B:
+        set_display(DISPLAY_TIME);
+ 2e6:	80 e0       	ldi	r24, 0x00	; 0
+ 2e8:	fd de       	rcall	.-518    	; 0xe4 <set_display>
+  return ( ((nr>>4)*10) + (nr & 0x0F) );
+}
+
+char bcd_inc(char nr)
+{
+  nr++;
+ 2ea:	20 91 85 00 	lds	r18, 0x0085
+ 2ee:	92 2f       	mov	r25, r18
+ 2f0:	9f 5f       	subi	r25, 0xFF	; 255
+  if((nr & 0x0F) == 0x0A)
+ 2f2:	89 2f       	mov	r24, r25
+ 2f4:	8f 70       	andi	r24, 0x0F	; 15
+ 2f6:	8a 30       	cpi	r24, 0x0A	; 10
+ 2f8:	09 f4       	brne	.+2      	; 0x2fc <__vector_6+0xbe>
+    nr += 6;
+ 2fa:	9a 5f       	subi	r25, 0xFA	; 250
+  if(nr > 99)
+ 2fc:	94 36       	cpi	r25, 0x64	; 100
+ 2fe:	08 f0       	brcs	.+2      	; 0x302 <__vector_6+0xc4>
+ 300:	90 e0       	ldi	r25, 0x00	; 0
+        q = twi_write_byte(2,clock.hours);
+        break;
+
+      case 0x0B:
+        set_display(DISPLAY_TIME);
+        clock.minutes = bcd_inc(clock.minutes);
+ 302:	90 93 85 00 	sts	0x0085, r25
+        if(clock.minutes == 0x60)
+ 306:	90 36       	cpi	r25, 0x60	; 96
+ 308:	11 f4       	brne	.+4      	; 0x30e <__vector_6+0xd0>
+          clock.minutes = 0;
+ 30a:	10 92 85 00 	sts	0x0085, r1
+        q = twi_write_byte(1,clock.minutes);
+ 30e:	81 e0       	ldi	r24, 0x01	; 1
+ 310:	60 91 85 00 	lds	r22, 0x0085
+ 314:	42 c0       	rjmp	.+132    	; 0x39a <__vector_6+0x15c>
+        break;
+        
+      case 0x0C:
+        set_display(DISPLAY_DATE);
+ 316:	81 e0       	ldi	r24, 0x01	; 1
+ 318:	e5 de       	rcall	.-566    	; 0xe4 <set_display>
+  return ( ((nr>>4)*10) + (nr & 0x0F) );
+}
+
+char bcd_inc(char nr)
+{
+  nr++;
+ 31a:	90 91 88 00 	lds	r25, 0x0088
+ 31e:	29 2f       	mov	r18, r25
+ 320:	2f 5f       	subi	r18, 0xFF	; 255
+  if((nr & 0x0F) == 0x0A)
+ 322:	82 2f       	mov	r24, r18
+ 324:	8f 70       	andi	r24, 0x0F	; 15
+ 326:	8a 30       	cpi	r24, 0x0A	; 10
+ 328:	09 f4       	brne	.+2      	; 0x32c <__vector_6+0xee>
+    nr += 6;
+ 32a:	2a 5f       	subi	r18, 0xFA	; 250
+  if(nr > 99)
+ 32c:	24 36       	cpi	r18, 0x64	; 100
+ 32e:	08 f0       	brcs	.+2      	; 0x332 <__vector_6+0xf4>
+ 330:	20 e0       	ldi	r18, 0x00	; 0
+        q = twi_write_byte(1,clock.minutes);
+        break;
+        
+      case 0x0C:
+        set_display(DISPLAY_DATE);
+        clock.date = bcd_inc(clock.date);
+ 332:	20 93 88 00 	sts	0x0088, r18
+        switch(clock.month)
+ 336:	80 91 89 00 	lds	r24, 0x0089
+ 33a:	90 e0       	ldi	r25, 0x00	; 0
+ 33c:	fc 01       	movw	r30, r24
+ 33e:	31 97       	sbiw	r30, 0x01	; 1
+ 340:	e2 31       	cpi	r30, 0x12	; 18
+ 342:	f1 05       	cpc	r31, r1
+ 344:	48 f4       	brcc	.+18     	; 0x358 <__vector_6+0x11a>
+ 346:	ed 5e       	subi	r30, 0xED	; 237
+ 348:	ff 4f       	sbci	r31, 0xFF	; 255
+ 34a:	09 94       	ijmp
+        {
+          case 0x01: case 0x03: case 0x05: case 0x07: case 0x08: case 0x10: case 0x12:
+            if(clock.date == 0x32)
+ 34c:	22 33       	cpi	r18, 0x32	; 50
+ 34e:	49 f4       	brne	.+18     	; 0x362 <__vector_6+0x124>
+ 350:	05 c0       	rjmp	.+10     	; 0x35c <__vector_6+0x11e>
+              clock.date = 1;
+            break;
+          case 0x04: case 0x06: case 0x09: case 0x11:
+            if(clock.date == 0x31)
+ 352:	21 33       	cpi	r18, 0x31	; 49
+ 354:	31 f4       	brne	.+12     	; 0x362 <__vector_6+0x124>
+ 356:	02 c0       	rjmp	.+4      	; 0x35c <__vector_6+0x11e>
+              clock.date = 1;
+            break;
+          default :
+            if(clock.date == 0x29)
+ 358:	29 32       	cpi	r18, 0x29	; 41
+ 35a:	19 f4       	brne	.+6      	; 0x362 <__vector_6+0x124>
+              clock.date = 1;
+ 35c:	81 e0       	ldi	r24, 0x01	; 1
+ 35e:	80 93 88 00 	sts	0x0088, r24
+            break;
+        }
+        q = twi_write_byte(4,clock.date);
+ 362:	84 e0       	ldi	r24, 0x04	; 4
+ 364:	60 91 88 00 	lds	r22, 0x0088
+ 368:	18 c0       	rjmp	.+48     	; 0x39a <__vector_6+0x15c>
+        break;
+        
+      case 0x0A:
+        set_display(DISPLAY_DATE);
+ 36a:	81 e0       	ldi	r24, 0x01	; 1
+ 36c:	bb de       	rcall	.-650    	; 0xe4 <set_display>
+  return ( ((nr>>4)*10) + (nr & 0x0F) );
+}
+
+char bcd_inc(char nr)
+{
+  nr++;
+ 36e:	20 91 89 00 	lds	r18, 0x0089
+ 372:	92 2f       	mov	r25, r18
+ 374:	9f 5f       	subi	r25, 0xFF	; 255
+  if((nr & 0x0F) == 0x0A)
+ 376:	89 2f       	mov	r24, r25
+ 378:	8f 70       	andi	r24, 0x0F	; 15
+ 37a:	8a 30       	cpi	r24, 0x0A	; 10
+ 37c:	09 f4       	brne	.+2      	; 0x380 <__vector_6+0x142>
+    nr += 6;
+ 37e:	9a 5f       	subi	r25, 0xFA	; 250
+  if(nr > 99)
+ 380:	94 36       	cpi	r25, 0x64	; 100
+ 382:	08 f0       	brcs	.+2      	; 0x386 <__vector_6+0x148>
+ 384:	90 e0       	ldi	r25, 0x00	; 0
+        q = twi_write_byte(4,clock.date);
+        break;
+        
+      case 0x0A:
+        set_display(DISPLAY_DATE);
+        clock.month = bcd_inc(clock.month);
+ 386:	90 93 89 00 	sts	0x0089, r25
+        if(clock.month == 0x13)
+ 38a:	93 31       	cpi	r25, 0x13	; 19
+ 38c:	19 f4       	brne	.+6      	; 0x394 <__vector_6+0x156>
+          clock.month = 1;
+ 38e:	81 e0       	ldi	r24, 0x01	; 1
+ 390:	80 93 89 00 	sts	0x0089, r24
+        q = twi_write_byte(5,clock.month);
+ 394:	85 e0       	ldi	r24, 0x05	; 5
+ 396:	60 91 89 00 	lds	r22, 0x0089
+ 39a:	28 d2       	rcall	.+1104   	; 0x7ec <twi_write_byte>
+ 39c:	80 93 80 00 	sts	0x0080, r24
+
+      default :
+        break;
+    }
+  }
+}
+ 3a0:	ff 91       	pop	r31
+ 3a2:	ef 91       	pop	r30
+ 3a4:	bf 91       	pop	r27
+ 3a6:	af 91       	pop	r26
+ 3a8:	9f 91       	pop	r25
+ 3aa:	8f 91       	pop	r24
+ 3ac:	7f 91       	pop	r23
+ 3ae:	6f 91       	pop	r22
+ 3b0:	5f 91       	pop	r21
+ 3b2:	4f 91       	pop	r20
+ 3b4:	3f 91       	pop	r19
+ 3b6:	2f 91       	pop	r18
+ 3b8:	0f 90       	pop	r0
+ 3ba:	0f be       	out	0x3f, r0	; 63
+ 3bc:	0f 90       	pop	r0
+ 3be:	1f 90       	pop	r1
+ 3c0:	18 95       	reti
+
+000003c2 <__vector_2>:
+}
+
+// ============== INT ====================
+
+ISR(INT1_vect)
+{
+ 3c2:	1f 92       	push	r1
+ 3c4:	0f 92       	push	r0
+ 3c6:	0f b6       	in	r0, 0x3f	; 63
+ 3c8:	0f 92       	push	r0
+ 3ca:	11 24       	eor	r1, r1
+ 3cc:	2f 93       	push	r18
+ 3ce:	3f 93       	push	r19
+ 3d0:	4f 93       	push	r20
+ 3d2:	5f 93       	push	r21
+ 3d4:	6f 93       	push	r22
+ 3d6:	7f 93       	push	r23
+ 3d8:	8f 93       	push	r24
+ 3da:	9f 93       	push	r25
+ 3dc:	af 93       	push	r26
+ 3de:	bf 93       	push	r27
+ 3e0:	ef 93       	push	r30
+ 3e2:	ff 93       	push	r31
+ 3e4:	df 93       	push	r29
+ 3e6:	cf 93       	push	r28
+ 3e8:	cd b7       	in	r28, 0x3d	; 61
+ 3ea:	de b7       	in	r29, 0x3e	; 62
+ 3ec:	27 97       	sbiw	r28, 0x07	; 7
+ 3ee:	de bf       	out	0x3e, r29	; 62
+ 3f0:	cd bf       	out	0x3d, r28	; 61
+  // set up interrupt triggering :
+  clock.seconds++;
+ 3f2:	90 91 84 00 	lds	r25, 0x0084
+ 3f6:	9f 5f       	subi	r25, 0xFF	; 255
+ 3f8:	90 93 84 00 	sts	0x0084, r25
+  if(clock.seconds & 1)
+ 3fc:	90 ff       	sbrs	r25, 0
+ 3fe:	02 c0       	rjmp	.+4      	; 0x404 <__vector_2+0x42>
+    MCUCR = 0x0A;
+ 400:	8a e0       	ldi	r24, 0x0A	; 10
+ 402:	01 c0       	rjmp	.+2      	; 0x406 <__vector_2+0x44>
+  else
+    MCUCR = 0x0E;
+ 404:	8e e0       	ldi	r24, 0x0E	; 14
+ 406:	85 bf       	out	0x35, r24	; 53
+
+  if(clock.seconds == 60)
+ 408:	9c 33       	cpi	r25, 0x3C	; 60
+ 40a:	89 f4       	brne	.+34     	; 0x42e <__vector_2+0x6c>
+  {
+    clock = rtc_read();
+ 40c:	de d0       	rcall	.+444    	; 0x5ca <rtc_read>
+ 40e:	29 83       	std	Y+1, r18	; 0x01
+ 410:	3a 83       	std	Y+2, r19	; 0x02
+ 412:	4b 83       	std	Y+3, r20	; 0x03
+ 414:	5c 83       	std	Y+4, r21	; 0x04
+ 416:	6d 83       	std	Y+5, r22	; 0x05
+ 418:	7e 83       	std	Y+6, r23	; 0x06
+ 41a:	8f 83       	std	Y+7, r24	; 0x07
+ 41c:	a4 e8       	ldi	r26, 0x84	; 132
+ 41e:	b0 e0       	ldi	r27, 0x00	; 0
+ 420:	fe 01       	movw	r30, r28
+ 422:	31 96       	adiw	r30, 0x01	; 1
+ 424:	87 e0       	ldi	r24, 0x07	; 7
+ 426:	01 90       	ld	r0, Z+
+ 428:	0d 92       	st	X+, r0
+ 42a:	81 50       	subi	r24, 0x01	; 1
+ 42c:	e1 f7       	brne	.-8      	; 0x426 <__vector_2+0x64>
+  }
+}
+ 42e:	27 96       	adiw	r28, 0x07	; 7
+ 430:	de bf       	out	0x3e, r29	; 62
+ 432:	cd bf       	out	0x3d, r28	; 61
+ 434:	cf 91       	pop	r28
+ 436:	df 91       	pop	r29
+ 438:	ff 91       	pop	r31
+ 43a:	ef 91       	pop	r30
+ 43c:	bf 91       	pop	r27
+ 43e:	af 91       	pop	r26
+ 440:	9f 91       	pop	r25
+ 442:	8f 91       	pop	r24
+ 444:	7f 91       	pop	r23
+ 446:	6f 91       	pop	r22
+ 448:	5f 91       	pop	r21
+ 44a:	4f 91       	pop	r20
+ 44c:	3f 91       	pop	r19
+ 44e:	2f 91       	pop	r18
+ 450:	0f 90       	pop	r0
+ 452:	0f be       	out	0x3f, r0	; 63
+ 454:	0f 90       	pop	r0
+ 456:	1f 90       	pop	r1
+ 458:	18 95       	reti
+
+0000045a <main>:
+}
+
+// ============== MAIN ===================
+
+int main()
+{
+ 45a:	df 93       	push	r29
+ 45c:	cf 93       	push	r28
+ 45e:	cd b7       	in	r28, 0x3d	; 61
+ 460:	de b7       	in	r29, 0x3e	; 62
+ 462:	27 97       	sbiw	r28, 0x07	; 7
+ 464:	0f b6       	in	r0, 0x3f	; 63
+ 466:	f8 94       	cli
+ 468:	de bf       	out	0x3e, r29	; 62
+ 46a:	0f be       	out	0x3f, r0	; 63
+ 46c:	cd bf       	out	0x3d, r28	; 61
+  //clock_buffer test = {1,2,3,4,5,6,7};
+  init();
+ 46e:	8e de       	rcall	.-740    	; 0x18c <init>
+
+  q = twi_write_byte(0,0);
+ 470:	80 e0       	ldi	r24, 0x00	; 0
+ 472:	60 e0       	ldi	r22, 0x00	; 0
+ 474:	bb d1       	rcall	.+886    	; 0x7ec <twi_write_byte>
+ 476:	80 93 80 00 	sts	0x0080, r24
+  clock = rtc_read();
+ 47a:	a7 d0       	rcall	.+334    	; 0x5ca <rtc_read>
+ 47c:	29 83       	std	Y+1, r18	; 0x01
+ 47e:	3a 83       	std	Y+2, r19	; 0x02
+ 480:	4b 83       	std	Y+3, r20	; 0x03
+ 482:	5c 83       	std	Y+4, r21	; 0x04
+ 484:	6d 83       	std	Y+5, r22	; 0x05
+ 486:	7e 83       	std	Y+6, r23	; 0x06
+ 488:	8f 83       	std	Y+7, r24	; 0x07
+ 48a:	a4 e8       	ldi	r26, 0x84	; 132
+ 48c:	b0 e0       	ldi	r27, 0x00	; 0
+ 48e:	fe 01       	movw	r30, r28
+ 490:	31 96       	adiw	r30, 0x01	; 1
+ 492:	87 e0       	ldi	r24, 0x07	; 7
+ 494:	01 90       	ld	r0, Z+
+ 496:	0d 92       	st	X+, r0
+ 498:	81 50       	subi	r24, 0x01	; 1
+ 49a:	e1 f7       	brne	.-8      	; 0x494 <__stack+0x35>
+  q = twi_write_byte(7,( 0<<OUT | 1<<SQWE | 0<<RS1 | 0<<RS0 )); // Set DS1307 square wave output on, freq = 1Hz
+ 49c:	87 e0       	ldi	r24, 0x07	; 7
+ 49e:	60 e1       	ldi	r22, 0x10	; 16
+ 4a0:	a5 d1       	rcall	.+842    	; 0x7ec <twi_write_byte>
+ 4a2:	80 93 80 00 	sts	0x0080, r24
+  set_display(DISPLAY_TIME);
+ 4a6:	80 e0       	ldi	r24, 0x00	; 0
+ 4a8:	1d de       	rcall	.-966    	; 0xe4 <set_display>
+ 4aa:	ff cf       	rjmp	.-2      	; 0x4aa <__stack+0x4b>
+
+000004ac <delay>:
+
+void delay(int cycles)
+{
+  while(cycles > 0)
+    cycles--;
+}
+ 4ac:	08 95       	ret
+
+000004ae <twi_start>:
+
+// ================= INITIALIZATION ==================
+
+char twi_start()
+{
+  TWCR = (1<<TWINT)|(1<<TWSTA)|(1<<TWEN);   // Send START condition
+ 4ae:	84 ea       	ldi	r24, 0xA4	; 164
+ 4b0:	86 bf       	out	0x36, r24	; 54
+  while (!(TWCR & (1<<TWINT)));             // Wait for TWINT flag set. This indicates that the START condition has been transmitted
+ 4b2:	06 b6       	in	r0, 0x36	; 54
+ 4b4:	07 fe       	sbrs	r0, 7
+ 4b6:	fd cf       	rjmp	.-6      	; 0x4b2 <twi_start+0x4>
+  TWI_S = (TWSR & 0xF8);
+ 4b8:	81 b1       	in	r24, 0x01	; 1
+ 4ba:	88 7f       	andi	r24, 0xF8	; 248
+ 4bc:	80 93 8b 00 	sts	0x008B, r24
+  if ((TWI_S != START) && (TWI_S != RESTART))  // Check value of TWI Status Register. Mask prescaler bits. 
+ 4c0:	88 30       	cpi	r24, 0x08	; 8
+ 4c2:	11 f4       	brne	.+4      	; 0x4c8 <twi_start+0x1a>
+ 4c4:	90 e0       	ldi	r25, 0x00	; 0
+ 4c6:	06 c0       	rjmp	.+12     	; 0x4d4 <twi_start+0x26>
+ 4c8:	90 e0       	ldi	r25, 0x00	; 0
+ 4ca:	80 31       	cpi	r24, 0x10	; 16
+ 4cc:	09 f4       	brne	.+2      	; 0x4d0 <twi_start+0x22>
+ 4ce:	91 e0       	ldi	r25, 0x01	; 1
+ 4d0:	81 e0       	ldi	r24, 0x01	; 1
+ 4d2:	98 27       	eor	r25, r24
+    return 1;                                // If status different from START go to ERROR
+  else
+    return 0;
+}
+ 4d4:	89 2f       	mov	r24, r25
+ 4d6:	08 95       	ret
+
+000004d8 <twi_stop>:
+
+char twi_stop()
+{
+  TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWSTO);
+ 4d8:	84 e9       	ldi	r24, 0x94	; 148
+ 4da:	86 bf       	out	0x36, r24	; 54
+  //delay(20);
+  return 0;
+}
+ 4dc:	80 e0       	ldi	r24, 0x00	; 0
+ 4de:	08 95       	ret
+
+000004e0 <twi_set_read>:
+
+// ================= INITIALIZATION ==================
+
+char twi_start()
+{
+  TWCR = (1<<TWINT)|(1<<TWSTA)|(1<<TWEN);   // Send START condition
+ 4e0:	84 ea       	ldi	r24, 0xA4	; 164
+ 4e2:	86 bf       	out	0x36, r24	; 54
+  while (!(TWCR & (1<<TWINT)));             // Wait for TWINT flag set. This indicates that the START condition has been transmitted
+ 4e4:	06 b6       	in	r0, 0x36	; 54
+ 4e6:	07 fe       	sbrs	r0, 7
+ 4e8:	fd cf       	rjmp	.-6      	; 0x4e4 <twi_set_read+0x4>
+  TWI_S = (TWSR & 0xF8);
+ 4ea:	81 b1       	in	r24, 0x01	; 1
+ 4ec:	88 7f       	andi	r24, 0xF8	; 248
+ 4ee:	80 93 8b 00 	sts	0x008B, r24
+  if ((TWI_S != START) && (TWI_S != RESTART))  // Check value of TWI Status Register. Mask prescaler bits. 
+ 4f2:	88 30       	cpi	r24, 0x08	; 8
+ 4f4:	81 f0       	breq	.+32     	; 0x516 <twi_set_read+0x36>
+ 4f6:	80 31       	cpi	r24, 0x10	; 16
+ 4f8:	59 f4       	brne	.+22     	; 0x510 <twi_set_read+0x30>
+ 4fa:	0d c0       	rjmp	.+26     	; 0x516 <twi_set_read+0x36>
+  if(twi_start() != 0)
+    return 1;
+  
+  TWDR = SLA_R;                             // Load slave address (SLA) + read bit(R) into TWDR Register.
+  TWCR = (1<<TWINT) | (1<<TWEN);            // Clear TWINT bit in TWCR to start transmission of address
+  while (!(TWCR & (1<<TWINT)));             // Wait for TWINT flag set. This indicates that the SLA+W has been transmitted, and ACK/NACK has been received.
+ 4fc:	06 b6       	in	r0, 0x36	; 54
+ 4fe:	07 fe       	sbrs	r0, 7
+ 500:	fd cf       	rjmp	.-6      	; 0x4fc <twi_set_read+0x1c>
+  TWI_S = (TWSR & 0xF8);
+ 502:	81 b1       	in	r24, 0x01	; 1
+ 504:	88 7f       	andi	r24, 0xF8	; 248
+ 506:	80 93 8b 00 	sts	0x008B, r24
+ 50a:	90 e0       	ldi	r25, 0x00	; 0
+ 50c:	80 34       	cpi	r24, 0x40	; 64
+ 50e:	09 f0       	breq	.+2      	; 0x512 <twi_set_read+0x32>
+ 510:	91 e0       	ldi	r25, 0x01	; 1
+  if (TWI_S != MR_SLA_ACK)          // Check value of TWI Status Register. Mask prescaler bits.
+    return 1;                                // If status different from ST_SLA_ACK go to ERROR
+  else
+    return 0;
+}
+ 512:	89 2f       	mov	r24, r25
+ 514:	08 95       	ret
+char twi_set_read()
+{
+  if(twi_start() != 0)
+    return 1;
+  
+  TWDR = SLA_R;                             // Load slave address (SLA) + read bit(R) into TWDR Register.
+ 516:	81 ed       	ldi	r24, 0xD1	; 209
+ 518:	83 b9       	out	0x03, r24	; 3
+  TWCR = (1<<TWINT) | (1<<TWEN);            // Clear TWINT bit in TWCR to start transmission of address
+ 51a:	84 e8       	ldi	r24, 0x84	; 132
+ 51c:	86 bf       	out	0x36, r24	; 54
+ 51e:	ee cf       	rjmp	.-36     	; 0x4fc <twi_set_read+0x1c>
+
+00000520 <twi_read>:
+    return 0;
+}
+
+int twi_read(char ack)
+{
+  if(ack)
+ 520:	88 23       	and	r24, r24
+ 522:	61 f0       	breq	.+24     	; 0x53c <twi_read+0x1c>
+  {
+    TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWEA);  // If NOT the last read byte, send ACK after read
+ 524:	84 ec       	ldi	r24, 0xC4	; 196
+ 526:	86 bf       	out	0x36, r24	; 54
+
+    while (!(TWCR & (1<<TWINT)));
+ 528:	06 b6       	in	r0, 0x36	; 54
+ 52a:	07 fe       	sbrs	r0, 7
+ 52c:	fd cf       	rjmp	.-6      	; 0x528 <twi_read+0x8>
+    TWI_S = (TWSR & 0xF8);
+ 52e:	81 b1       	in	r24, 0x01	; 1
+ 530:	88 7f       	andi	r24, 0xF8	; 248
+ 532:	80 93 8b 00 	sts	0x008B, r24
+    
+    if(TWI_S != MR_DATA_ACK) 
+ 536:	80 35       	cpi	r24, 0x50	; 80
+ 538:	81 f4       	brne	.+32     	; 0x55a <twi_read+0x3a>
+ 53a:	0b c0       	rjmp	.+22     	; 0x552 <twi_read+0x32>
+    else
+      return TWDR;
+  }
+  else
+  {
+    TWCR = (1<<TWINT) | (1<<TWEN) | (0<<TWEA);  // If the last read byte, send NACK after read
+ 53c:	84 e8       	ldi	r24, 0x84	; 132
+ 53e:	86 bf       	out	0x36, r24	; 54
+
+    while (!(TWCR & (1<<TWINT)));
+ 540:	06 b6       	in	r0, 0x36	; 54
+ 542:	07 fe       	sbrs	r0, 7
+ 544:	fd cf       	rjmp	.-6      	; 0x540 <twi_read+0x20>
+    TWI_S = (TWSR & 0xF8);
+ 546:	81 b1       	in	r24, 0x01	; 1
+ 548:	88 7f       	andi	r24, 0xF8	; 248
+ 54a:	80 93 8b 00 	sts	0x008B, r24
+    
+    if(TWI_S != MR_DATA_NACK) 
+ 54e:	88 35       	cpi	r24, 0x58	; 88
+ 550:	21 f4       	brne	.+8      	; 0x55a <twi_read+0x3a>
+      return ((1<<8) | 0x00);
+    else
+      return TWDR;
+ 552:	83 b1       	in	r24, 0x03	; 3
+ 554:	28 2f       	mov	r18, r24
+ 556:	30 e0       	ldi	r19, 0x00	; 0
+ 558:	02 c0       	rjmp	.+4      	; 0x55e <twi_read+0x3e>
+ 55a:	20 e0       	ldi	r18, 0x00	; 0
+ 55c:	31 e0       	ldi	r19, 0x01	; 1
+  }
+}
+ 55e:	c9 01       	movw	r24, r18
+ 560:	08 95       	ret
+
+00000562 <twi_set_write>:
+
+// ================= INITIALIZATION ==================
+
+char twi_start()
+{
+  TWCR = (1<<TWINT)|(1<<TWSTA)|(1<<TWEN);   // Send START condition
+ 562:	84 ea       	ldi	r24, 0xA4	; 164
+ 564:	86 bf       	out	0x36, r24	; 54
+  while (!(TWCR & (1<<TWINT)));             // Wait for TWINT flag set. This indicates that the START condition has been transmitted
+ 566:	06 b6       	in	r0, 0x36	; 54
+ 568:	07 fe       	sbrs	r0, 7
+ 56a:	fd cf       	rjmp	.-6      	; 0x566 <twi_set_write+0x4>
+  TWI_S = (TWSR & 0xF8);
+ 56c:	81 b1       	in	r24, 0x01	; 1
+ 56e:	88 7f       	andi	r24, 0xF8	; 248
+ 570:	80 93 8b 00 	sts	0x008B, r24
+  if ((TWI_S != START) && (TWI_S != RESTART))  // Check value of TWI Status Register. Mask prescaler bits. 
+ 574:	88 30       	cpi	r24, 0x08	; 8
+ 576:	81 f0       	breq	.+32     	; 0x598 <twi_set_write+0x36>
+ 578:	80 31       	cpi	r24, 0x10	; 16
+ 57a:	59 f4       	brne	.+22     	; 0x592 <twi_set_write+0x30>
+ 57c:	0d c0       	rjmp	.+26     	; 0x598 <twi_set_write+0x36>
+  if(twi_start() != 0)
+    return 1;
+  
+  TWDR = SLA_W;                             // Load slave address (SLA) + write bit(W) into TWDR Register.
+  TWCR = (1<<TWINT) | (1<<TWEN);            // Clear TWINT bit in TWCR to start transmission of address
+  while (!(TWCR & (1<<TWINT)));             // Wait for TWINT flag set. This indicates that the SLA+W has been transmitted, and ACK/NACK has been received.
+ 57e:	06 b6       	in	r0, 0x36	; 54
+ 580:	07 fe       	sbrs	r0, 7
+ 582:	fd cf       	rjmp	.-6      	; 0x57e <twi_set_write+0x1c>
+  TWI_S = (TWSR & 0xF8);
+ 584:	81 b1       	in	r24, 0x01	; 1
+ 586:	88 7f       	andi	r24, 0xF8	; 248
+ 588:	80 93 8b 00 	sts	0x008B, r24
+ 58c:	90 e0       	ldi	r25, 0x00	; 0
+ 58e:	88 31       	cpi	r24, 0x18	; 24
+ 590:	09 f0       	breq	.+2      	; 0x594 <twi_set_write+0x32>
+ 592:	91 e0       	ldi	r25, 0x01	; 1
+  if (TWI_S != MT_SLA_ACK)          // Check value of TWI Status Register. Mask prescaler bits.
+    return 1;                                // If status different from ST_SLA_ACK go to ERROR
+  else
+    return 0;
+}
+ 594:	89 2f       	mov	r24, r25
+ 596:	08 95       	ret
+char twi_set_write()
+{
+  if(twi_start() != 0)
+    return 1;
+  
+  TWDR = SLA_W;                             // Load slave address (SLA) + write bit(W) into TWDR Register.
+ 598:	80 ed       	ldi	r24, 0xD0	; 208
+ 59a:	83 b9       	out	0x03, r24	; 3
+  TWCR = (1<<TWINT) | (1<<TWEN);            // Clear TWINT bit in TWCR to start transmission of address
+ 59c:	84 e8       	ldi	r24, 0x84	; 132
+ 59e:	86 bf       	out	0x36, r24	; 54
+ 5a0:	ee cf       	rjmp	.-36     	; 0x57e <twi_set_write+0x1c>
+
+000005a2 <rtc_set_address>:
+  //delay(20);
+  return 0;
+}
+
+char rtc_set_address(char addr)
+{
+ 5a2:	1f 93       	push	r17
+ 5a4:	18 2f       	mov	r17, r24
+  if(twi_set_write() != 0)
+ 5a6:	dd df       	rcall	.-70     	; 0x562 <twi_set_write>
+ 5a8:	88 23       	and	r24, r24
+ 5aa:	11 f0       	breq	.+4      	; 0x5b0 <rtc_set_address+0xe>
+ 5ac:	81 e0       	ldi	r24, 0x01	; 1
+ 5ae:	0b c0       	rjmp	.+22     	; 0x5c6 <rtc_set_address+0x24>
+    return 0;
+}
+
+char twi_write(char c)
+{
+  TWDR = c;                               // Load DATA into TWDR Register
+ 5b0:	13 b9       	out	0x03, r17	; 3
+  TWCR = (1<<TWINT) | (1<<TWEN);          // Clear TWINT bit in TWCR to start transmission of data
+ 5b2:	84 e8       	ldi	r24, 0x84	; 132
+ 5b4:	86 bf       	out	0x36, r24	; 54
+  while (!(TWCR & (1<<TWINT)));           // Wait for TWINT flag set. This indicates that the DATA has been transmitted, and ACK/NACK has been received
+ 5b6:	06 b6       	in	r0, 0x36	; 54
+ 5b8:	07 fe       	sbrs	r0, 7
+ 5ba:	fd cf       	rjmp	.-6      	; 0x5b6 <rtc_set_address+0x14>
+  TWI_S = (TWSR & 0xF8);
+ 5bc:	81 b1       	in	r24, 0x01	; 1
+ 5be:	88 7f       	andi	r24, 0xF8	; 248
+ 5c0:	80 93 8b 00 	sts	0x008B, r24
+ 5c4:	80 e0       	ldi	r24, 0x00	; 0
+{
+  if(twi_set_write() != 0)
+    return 1;
+  twi_write(addr);
+  return 0;
+}
+ 5c6:	1f 91       	pop	r17
+ 5c8:	08 95       	ret
+
+000005ca <rtc_read>:
+      return TWDR;
+  }
+}
+
+clock_buffer rtc_read()
+{
+ 5ca:	cf 92       	push	r12
+ 5cc:	df 92       	push	r13
+ 5ce:	ef 92       	push	r14
+ 5d0:	ff 92       	push	r15
+ 5d2:	0f 93       	push	r16
+ 5d4:	1f 93       	push	r17
+ 5d6:	df 93       	push	r29
+ 5d8:	cf 93       	push	r28
+ 5da:	cd b7       	in	r28, 0x3d	; 61
+ 5dc:	de b7       	in	r29, 0x3e	; 62
+ 5de:	27 97       	sbiw	r28, 0x07	; 7
+ 5e0:	0f b6       	in	r0, 0x3f	; 63
+ 5e2:	f8 94       	cli
+ 5e4:	de bf       	out	0x3e, r29	; 62
+ 5e6:	0f be       	out	0x3f, r0	; 63
+ 5e8:	cd bf       	out	0x3d, r28	; 61
+  clock_buffer buf = {0};
+ 
+  rtc_set_address(0x00);
+ 5ea:	80 e0       	ldi	r24, 0x00	; 0
+ 5ec:	da df       	rcall	.-76     	; 0x5a2 <rtc_set_address>
+  
+  if(twi_set_read() != 0)
+ 5ee:	78 df       	rcall	.-272    	; 0x4e0 <twi_set_read>
+ 5f0:	88 23       	and	r24, r24
+ 5f2:	41 f0       	breq	.+16     	; 0x604 <rtc_read+0x3a>
+ 5f4:	cc 24       	eor	r12, r12
+ 5f6:	dd 24       	eor	r13, r13
+ 5f8:	ee 24       	eor	r14, r14
+ 5fa:	ff 24       	eor	r15, r15
+ 5fc:	00 e0       	ldi	r16, 0x00	; 0
+ 5fe:	10 e0       	ldi	r17, 0x00	; 0
+ 600:	90 e0       	ldi	r25, 0x00	; 0
+ 602:	17 c0       	rjmp	.+46     	; 0x632 <rtc_read+0x68>
+    return buf;
+  
+  buf.seconds = twi_read(1);
+ 604:	81 e0       	ldi	r24, 0x01	; 1
+ 606:	8c df       	rcall	.-232    	; 0x520 <twi_read>
+ 608:	c8 2e       	mov	r12, r24
+  buf.minutes = twi_read(1);
+ 60a:	81 e0       	ldi	r24, 0x01	; 1
+ 60c:	89 df       	rcall	.-238    	; 0x520 <twi_read>
+ 60e:	d8 2e       	mov	r13, r24
+  buf.hours = twi_read(1);
+ 610:	81 e0       	ldi	r24, 0x01	; 1
+ 612:	86 df       	rcall	.-244    	; 0x520 <twi_read>
+ 614:	e8 2e       	mov	r14, r24
+  buf.day = twi_read(1);
+ 616:	81 e0       	ldi	r24, 0x01	; 1
+ 618:	83 df       	rcall	.-250    	; 0x520 <twi_read>
+ 61a:	f8 2e       	mov	r15, r24
+  buf.date = twi_read(1);
+ 61c:	81 e0       	ldi	r24, 0x01	; 1
+ 61e:	80 df       	rcall	.-256    	; 0x520 <twi_read>
+ 620:	08 2f       	mov	r16, r24
+  buf.month = twi_read(1);
+ 622:	81 e0       	ldi	r24, 0x01	; 1
+ 624:	7d df       	rcall	.-262    	; 0x520 <twi_read>
+ 626:	18 2f       	mov	r17, r24
+  buf.year = twi_read(0);
+ 628:	80 e0       	ldi	r24, 0x00	; 0
+ 62a:	7a df       	rcall	.-268    	; 0x520 <twi_read>
+ 62c:	98 2f       	mov	r25, r24
+    return 0;
+}
+
+char twi_stop()
+{
+  TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWSTO);
+ 62e:	84 e9       	ldi	r24, 0x94	; 148
+ 630:	86 bf       	out	0x36, r24	; 54
+  buf.month = twi_read(1);
+  buf.year = twi_read(0);
+  
+  twi_stop();
+  return buf;
+}
+ 632:	96 01       	movw	r18, r12
+ 634:	a7 01       	movw	r20, r14
+ 636:	b8 01       	movw	r22, r16
+ 638:	89 2f       	mov	r24, r25
+ 63a:	90 e0       	ldi	r25, 0x00	; 0
+ 63c:	27 96       	adiw	r28, 0x07	; 7
+ 63e:	0f b6       	in	r0, 0x3f	; 63
+ 640:	f8 94       	cli
+ 642:	de bf       	out	0x3e, r29	; 62
+ 644:	0f be       	out	0x3f, r0	; 63
+ 646:	cd bf       	out	0x3d, r28	; 61
+ 648:	cf 91       	pop	r28
+ 64a:	df 91       	pop	r29
+ 64c:	1f 91       	pop	r17
+ 64e:	0f 91       	pop	r16
+ 650:	ff 90       	pop	r15
+ 652:	ef 90       	pop	r14
+ 654:	df 90       	pop	r13
+ 656:	cf 90       	pop	r12
+ 658:	08 95       	ret
+
+0000065a <twi_write>:
+    return 0;
+}
+
+char twi_write(char c)
+{
+  TWDR = c;                               // Load DATA into TWDR Register
+ 65a:	83 b9       	out	0x03, r24	; 3
+  TWCR = (1<<TWINT) | (1<<TWEN);          // Clear TWINT bit in TWCR to start transmission of data
+ 65c:	84 e8       	ldi	r24, 0x84	; 132
+ 65e:	86 bf       	out	0x36, r24	; 54
+  while (!(TWCR & (1<<TWINT)));           // Wait for TWINT flag set. This indicates that the DATA has been transmitted, and ACK/NACK has been received
+ 660:	06 b6       	in	r0, 0x36	; 54
+ 662:	07 fe       	sbrs	r0, 7
+ 664:	fd cf       	rjmp	.-6      	; 0x660 <twi_write+0x6>
+  TWI_S = (TWSR & 0xF8);
+ 666:	81 b1       	in	r24, 0x01	; 1
+ 668:	88 7f       	andi	r24, 0xF8	; 248
+ 66a:	80 93 8b 00 	sts	0x008B, r24
+ 66e:	90 e0       	ldi	r25, 0x00	; 0
+ 670:	88 32       	cpi	r24, 0x28	; 40
+ 672:	09 f0       	breq	.+2      	; 0x676 <twi_write+0x1c>
+ 674:	91 e0       	ldi	r25, 0x01	; 1
+  if (TWI_S != MT_DATA_ACK)
+    return 1;
+  else
+    return 0;
+}
+ 676:	89 2f       	mov	r24, r25
+ 678:	08 95       	ret
+
+0000067a <rtc_write>:
+
+char rtc_write(clock_buffer buf)
+{
+ 67a:	bf 92       	push	r11
+ 67c:	cf 92       	push	r12
+ 67e:	df 92       	push	r13
+ 680:	ef 92       	push	r14
+ 682:	ff 92       	push	r15
+ 684:	0f 93       	push	r16
+ 686:	1f 93       	push	r17
+ 688:	df 93       	push	r29
+ 68a:	cf 93       	push	r28
+ 68c:	cd b7       	in	r28, 0x3d	; 61
+ 68e:	de b7       	in	r29, 0x3e	; 62
+ 690:	27 97       	sbiw	r28, 0x07	; 7
+ 692:	0f b6       	in	r0, 0x3f	; 63
+ 694:	f8 94       	cli
+ 696:	de bf       	out	0x3e, r29	; 62
+ 698:	0f be       	out	0x3f, r0	; 63
+ 69a:	cd bf       	out	0x3d, r28	; 61
+ 69c:	a2 2f       	mov	r26, r18
+ 69e:	29 83       	std	Y+1, r18	; 0x01
+ 6a0:	f3 2f       	mov	r31, r19
+ 6a2:	3a 83       	std	Y+2, r19	; 0x02
+ 6a4:	4b 83       	std	Y+3, r20	; 0x03
+ 6a6:	5c 83       	std	Y+4, r21	; 0x04
+ 6a8:	6d 83       	std	Y+5, r22	; 0x05
+ 6aa:	7e 83       	std	Y+6, r23	; 0x06
+ 6ac:	8f 83       	std	Y+7, r24	; 0x07
+ 6ae:	1a 2f       	mov	r17, r26
+ 6b0:	0f 2f       	mov	r16, r31
+ 6b2:	f4 2e       	mov	r15, r20
+ 6b4:	e5 2e       	mov	r14, r21
+ 6b6:	d6 2e       	mov	r13, r22
+ 6b8:	c7 2e       	mov	r12, r23
+ 6ba:	b8 2e       	mov	r11, r24
+  if(twi_set_write() != 0)
+ 6bc:	52 df       	rcall	.-348    	; 0x562 <twi_set_write>
+ 6be:	88 23       	and	r24, r24
+ 6c0:	11 f0       	breq	.+4      	; 0x6c6 <rtc_write+0x4c>
+ 6c2:	88 e0       	ldi	r24, 0x08	; 8
+ 6c4:	59 c0       	rjmp	.+178    	; 0x778 <rtc_write+0xfe>
+    return 0;
+}
+
+char twi_write(char c)
+{
+  TWDR = c;                               // Load DATA into TWDR Register
+ 6c6:	13 b8       	out	0x03, r1	; 3
+  TWCR = (1<<TWINT) | (1<<TWEN);          // Clear TWINT bit in TWCR to start transmission of data
+ 6c8:	84 e8       	ldi	r24, 0x84	; 132
+ 6ca:	86 bf       	out	0x36, r24	; 54
+  while (!(TWCR & (1<<TWINT)));           // Wait for TWINT flag set. This indicates that the DATA has been transmitted, and ACK/NACK has been received
+ 6cc:	06 b6       	in	r0, 0x36	; 54
+ 6ce:	07 fe       	sbrs	r0, 7
+ 6d0:	fd cf       	rjmp	.-6      	; 0x6cc <rtc_write+0x52>
+  TWI_S = (TWSR & 0xF8);
+ 6d2:	81 b1       	in	r24, 0x01	; 1
+    return 0;
+}
+
+char twi_write(char c)
+{
+  TWDR = c;                               // Load DATA into TWDR Register
+ 6d4:	13 b9       	out	0x03, r17	; 3
+  TWCR = (1<<TWINT) | (1<<TWEN);          // Clear TWINT bit in TWCR to start transmission of data
+ 6d6:	84 e8       	ldi	r24, 0x84	; 132
+ 6d8:	86 bf       	out	0x36, r24	; 54
+  while (!(TWCR & (1<<TWINT)));           // Wait for TWINT flag set. This indicates that the DATA has been transmitted, and ACK/NACK has been received
+ 6da:	06 b6       	in	r0, 0x36	; 54
+ 6dc:	07 fe       	sbrs	r0, 7
+ 6de:	fd cf       	rjmp	.-6      	; 0x6da <rtc_write+0x60>
+  TWI_S = (TWSR & 0xF8);
+ 6e0:	81 b1       	in	r24, 0x01	; 1
+ 6e2:	88 7f       	andi	r24, 0xF8	; 248
+ 6e4:	80 93 8b 00 	sts	0x008B, r24
+  if (TWI_S != MT_DATA_ACK)
+ 6e8:	88 32       	cpi	r24, 0x28	; 40
+ 6ea:	09 f4       	brne	.+2      	; 0x6ee <rtc_write+0x74>
+ 6ec:	55 c0       	rjmp	.+170    	; 0x798 <rtc_write+0x11e>
+ 6ee:	87 e0       	ldi	r24, 0x07	; 7
+ 6f0:	43 c0       	rjmp	.+134    	; 0x778 <rtc_write+0xfe>
+
+char twi_write(char c)
+{
+  TWDR = c;                               // Load DATA into TWDR Register
+  TWCR = (1<<TWINT) | (1<<TWEN);          // Clear TWINT bit in TWCR to start transmission of data
+  while (!(TWCR & (1<<TWINT)));           // Wait for TWINT flag set. This indicates that the DATA has been transmitted, and ACK/NACK has been received
+ 6f2:	06 b6       	in	r0, 0x36	; 54
+ 6f4:	07 fe       	sbrs	r0, 7
+ 6f6:	fd cf       	rjmp	.-6      	; 0x6f2 <rtc_write+0x78>
+  TWI_S = (TWSR & 0xF8);
+ 6f8:	81 b1       	in	r24, 0x01	; 1
+ 6fa:	88 7f       	andi	r24, 0xF8	; 248
+ 6fc:	80 93 8b 00 	sts	0x008B, r24
+  if (TWI_S != MT_DATA_ACK)
+ 700:	88 32       	cpi	r24, 0x28	; 40
+ 702:	09 f4       	brne	.+2      	; 0x706 <rtc_write+0x8c>
+ 704:	4d c0       	rjmp	.+154    	; 0x7a0 <rtc_write+0x126>
+ 706:	86 e0       	ldi	r24, 0x06	; 6
+ 708:	37 c0       	rjmp	.+110    	; 0x778 <rtc_write+0xfe>
+
+char twi_write(char c)
+{
+  TWDR = c;                               // Load DATA into TWDR Register
+  TWCR = (1<<TWINT) | (1<<TWEN);          // Clear TWINT bit in TWCR to start transmission of data
+  while (!(TWCR & (1<<TWINT)));           // Wait for TWINT flag set. This indicates that the DATA has been transmitted, and ACK/NACK has been received
+ 70a:	06 b6       	in	r0, 0x36	; 54
+ 70c:	07 fe       	sbrs	r0, 7
+ 70e:	fd cf       	rjmp	.-6      	; 0x70a <rtc_write+0x90>
+  TWI_S = (TWSR & 0xF8);
+ 710:	81 b1       	in	r24, 0x01	; 1
+ 712:	88 7f       	andi	r24, 0xF8	; 248
+ 714:	80 93 8b 00 	sts	0x008B, r24
+  if (TWI_S != MT_DATA_ACK)
+ 718:	88 32       	cpi	r24, 0x28	; 40
+ 71a:	09 f4       	brne	.+2      	; 0x71e <rtc_write+0xa4>
+ 71c:	45 c0       	rjmp	.+138    	; 0x7a8 <rtc_write+0x12e>
+ 71e:	85 e0       	ldi	r24, 0x05	; 5
+ 720:	2b c0       	rjmp	.+86     	; 0x778 <rtc_write+0xfe>
+
+char twi_write(char c)
+{
+  TWDR = c;                               // Load DATA into TWDR Register
+  TWCR = (1<<TWINT) | (1<<TWEN);          // Clear TWINT bit in TWCR to start transmission of data
+  while (!(TWCR & (1<<TWINT)));           // Wait for TWINT flag set. This indicates that the DATA has been transmitted, and ACK/NACK has been received
+ 722:	06 b6       	in	r0, 0x36	; 54
+ 724:	07 fe       	sbrs	r0, 7
+ 726:	fd cf       	rjmp	.-6      	; 0x722 <rtc_write+0xa8>
+  TWI_S = (TWSR & 0xF8);
+ 728:	81 b1       	in	r24, 0x01	; 1
+ 72a:	88 7f       	andi	r24, 0xF8	; 248
+ 72c:	80 93 8b 00 	sts	0x008B, r24
+  if (TWI_S != MT_DATA_ACK)
+ 730:	88 32       	cpi	r24, 0x28	; 40
+ 732:	f1 f1       	breq	.+124    	; 0x7b0 <rtc_write+0x136>
+ 734:	84 e0       	ldi	r24, 0x04	; 4
+ 736:	20 c0       	rjmp	.+64     	; 0x778 <rtc_write+0xfe>
+
+char twi_write(char c)
+{
+  TWDR = c;                               // Load DATA into TWDR Register
+  TWCR = (1<<TWINT) | (1<<TWEN);          // Clear TWINT bit in TWCR to start transmission of data
+  while (!(TWCR & (1<<TWINT)));           // Wait for TWINT flag set. This indicates that the DATA has been transmitted, and ACK/NACK has been received
+ 738:	06 b6       	in	r0, 0x36	; 54
+ 73a:	07 fe       	sbrs	r0, 7
+ 73c:	fd cf       	rjmp	.-6      	; 0x738 <rtc_write+0xbe>
+  TWI_S = (TWSR & 0xF8);
+ 73e:	81 b1       	in	r24, 0x01	; 1
+ 740:	88 7f       	andi	r24, 0xF8	; 248
+ 742:	80 93 8b 00 	sts	0x008B, r24
+  if (TWI_S != MT_DATA_ACK)
+ 746:	88 32       	cpi	r24, 0x28	; 40
+ 748:	b9 f1       	breq	.+110    	; 0x7b8 <rtc_write+0x13e>
+ 74a:	83 e0       	ldi	r24, 0x03	; 3
+ 74c:	15 c0       	rjmp	.+42     	; 0x778 <rtc_write+0xfe>
+
+char twi_write(char c)
+{
+  TWDR = c;                               // Load DATA into TWDR Register
+  TWCR = (1<<TWINT) | (1<<TWEN);          // Clear TWINT bit in TWCR to start transmission of data
+  while (!(TWCR & (1<<TWINT)));           // Wait for TWINT flag set. This indicates that the DATA has been transmitted, and ACK/NACK has been received
+ 74e:	06 b6       	in	r0, 0x36	; 54
+ 750:	07 fe       	sbrs	r0, 7
+ 752:	fd cf       	rjmp	.-6      	; 0x74e <rtc_write+0xd4>
+  TWI_S = (TWSR & 0xF8);
+ 754:	81 b1       	in	r24, 0x01	; 1
+ 756:	88 7f       	andi	r24, 0xF8	; 248
+ 758:	80 93 8b 00 	sts	0x008B, r24
+  if (TWI_S != MT_DATA_ACK)
+ 75c:	88 32       	cpi	r24, 0x28	; 40
+ 75e:	81 f1       	breq	.+96     	; 0x7c0 <rtc_write+0x146>
+ 760:	82 e0       	ldi	r24, 0x02	; 2
+ 762:	0a c0       	rjmp	.+20     	; 0x778 <rtc_write+0xfe>
+
+char twi_write(char c)
+{
+  TWDR = c;                               // Load DATA into TWDR Register
+  TWCR = (1<<TWINT) | (1<<TWEN);          // Clear TWINT bit in TWCR to start transmission of data
+  while (!(TWCR & (1<<TWINT)));           // Wait for TWINT flag set. This indicates that the DATA has been transmitted, and ACK/NACK has been received
+ 764:	06 b6       	in	r0, 0x36	; 54
+ 766:	07 fe       	sbrs	r0, 7
+ 768:	fd cf       	rjmp	.-6      	; 0x764 <rtc_write+0xea>
+  TWI_S = (TWSR & 0xF8);
+ 76a:	81 b1       	in	r24, 0x01	; 1
+ 76c:	88 7f       	andi	r24, 0xF8	; 248
+ 76e:	80 93 8b 00 	sts	0x008B, r24
+  if (TWI_S != MT_DATA_ACK)
+ 772:	88 32       	cpi	r24, 0x28	; 40
+ 774:	49 f1       	breq	.+82     	; 0x7c8 <rtc_write+0x14e>
+ 776:	81 e0       	ldi	r24, 0x01	; 1
+  if(twi_write(buf.year)!=0)
+    return 1;
+  
+  twi_stop();
+  return 0;
+}
+ 778:	27 96       	adiw	r28, 0x07	; 7
+ 77a:	0f b6       	in	r0, 0x3f	; 63
+ 77c:	f8 94       	cli
+ 77e:	de bf       	out	0x3e, r29	; 62
+ 780:	0f be       	out	0x3f, r0	; 63
+ 782:	cd bf       	out	0x3d, r28	; 61
+ 784:	cf 91       	pop	r28
+ 786:	df 91       	pop	r29
+ 788:	1f 91       	pop	r17
+ 78a:	0f 91       	pop	r16
+ 78c:	ff 90       	pop	r15
+ 78e:	ef 90       	pop	r14
+ 790:	df 90       	pop	r13
+ 792:	cf 90       	pop	r12
+ 794:	bf 90       	pop	r11
+ 796:	08 95       	ret
+    return 0;
+}
+
+char twi_write(char c)
+{
+  TWDR = c;                               // Load DATA into TWDR Register
+ 798:	03 b9       	out	0x03, r16	; 3
+  TWCR = (1<<TWINT) | (1<<TWEN);          // Clear TWINT bit in TWCR to start transmission of data
+ 79a:	84 e8       	ldi	r24, 0x84	; 132
+ 79c:	86 bf       	out	0x36, r24	; 54
+ 79e:	a9 cf       	rjmp	.-174    	; 0x6f2 <rtc_write+0x78>
+    return 0;
+}
+
+char twi_write(char c)
+{
+  TWDR = c;                               // Load DATA into TWDR Register
+ 7a0:	f3 b8       	out	0x03, r15	; 3
+  TWCR = (1<<TWINT) | (1<<TWEN);          // Clear TWINT bit in TWCR to start transmission of data
+ 7a2:	84 e8       	ldi	r24, 0x84	; 132
+ 7a4:	86 bf       	out	0x36, r24	; 54
+ 7a6:	b1 cf       	rjmp	.-158    	; 0x70a <rtc_write+0x90>
+    return 0;
+}
+
+char twi_write(char c)
+{
+  TWDR = c;                               // Load DATA into TWDR Register
+ 7a8:	e3 b8       	out	0x03, r14	; 3
+  TWCR = (1<<TWINT) | (1<<TWEN);          // Clear TWINT bit in TWCR to start transmission of data
+ 7aa:	84 e8       	ldi	r24, 0x84	; 132
+ 7ac:	86 bf       	out	0x36, r24	; 54
+ 7ae:	b9 cf       	rjmp	.-142    	; 0x722 <rtc_write+0xa8>
+    return 0;
+}
+
+char twi_write(char c)
+{
+  TWDR = c;                               // Load DATA into TWDR Register
+ 7b0:	d3 b8       	out	0x03, r13	; 3
+  TWCR = (1<<TWINT) | (1<<TWEN);          // Clear TWINT bit in TWCR to start transmission of data
+ 7b2:	84 e8       	ldi	r24, 0x84	; 132
+ 7b4:	86 bf       	out	0x36, r24	; 54
+ 7b6:	c0 cf       	rjmp	.-128    	; 0x738 <rtc_write+0xbe>
+    return 0;
+}
+
+char twi_write(char c)
+{
+  TWDR = c;                               // Load DATA into TWDR Register
+ 7b8:	c3 b8       	out	0x03, r12	; 3
+  TWCR = (1<<TWINT) | (1<<TWEN);          // Clear TWINT bit in TWCR to start transmission of data
+ 7ba:	84 e8       	ldi	r24, 0x84	; 132
+ 7bc:	86 bf       	out	0x36, r24	; 54
+ 7be:	c7 cf       	rjmp	.-114    	; 0x74e <rtc_write+0xd4>
+    return 0;
+}
+
+char twi_write(char c)
+{
+  TWDR = c;                               // Load DATA into TWDR Register
+ 7c0:	b3 b8       	out	0x03, r11	; 3
+  TWCR = (1<<TWINT) | (1<<TWEN);          // Clear TWINT bit in TWCR to start transmission of data
+ 7c2:	84 e8       	ldi	r24, 0x84	; 132
+ 7c4:	86 bf       	out	0x36, r24	; 54
+ 7c6:	ce cf       	rjmp	.-100    	; 0x764 <rtc_write+0xea>
+    return 0;
+}
+
+char twi_stop()
+{
+  TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWSTO);
+ 7c8:	84 e9       	ldi	r24, 0x94	; 148
+ 7ca:	86 bf       	out	0x36, r24	; 54
+ 7cc:	80 e0       	ldi	r24, 0x00	; 0
+ 7ce:	d4 cf       	rjmp	.-88     	; 0x778 <rtc_write+0xfe>
+
+000007d0 <twi_read_byte>:
+
+
+int twi_read_byte(char addr)
+{
+  int data = 0;
+  rtc_set_address(addr);
+ 7d0:	e8 de       	rcall	.-560    	; 0x5a2 <rtc_set_address>
+  
+  if(twi_set_read() != 0)
+ 7d2:	86 de       	rcall	.-756    	; 0x4e0 <twi_set_read>
+ 7d4:	88 23       	and	r24, r24
+ 7d6:	19 f0       	breq	.+6      	; 0x7de <twi_read_byte+0xe>
+ 7d8:	20 e0       	ldi	r18, 0x00	; 0
+ 7da:	31 e0       	ldi	r19, 0x01	; 1
+ 7dc:	05 c0       	rjmp	.+10     	; 0x7e8 <twi_read_byte+0x18>
+    return ((1<<8) | 0x00);
+
+  data = twi_read(0);
+ 7de:	80 e0       	ldi	r24, 0x00	; 0
+ 7e0:	9f de       	rcall	.-706    	; 0x520 <twi_read>
+ 7e2:	9c 01       	movw	r18, r24
+    return 0;
+}
+
+char twi_stop()
+{
+  TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWSTO);
+ 7e4:	84 e9       	ldi	r24, 0x94	; 148
+ 7e6:	86 bf       	out	0x36, r24	; 54
+
+  data = twi_read(0);
+  twi_stop();
+  
+  return data;  
+}
+ 7e8:	c9 01       	movw	r24, r18
+ 7ea:	08 95       	ret
+
+000007ec <twi_write_byte>:
+
+char twi_write_byte(char addr, char data)
+{
+ 7ec:	0f 93       	push	r16
+ 7ee:	1f 93       	push	r17
+ 7f0:	18 2f       	mov	r17, r24
+ 7f2:	06 2f       	mov	r16, r22
+  if(twi_set_write() != 0)
+ 7f4:	b6 de       	rcall	.-660    	; 0x562 <twi_set_write>
+ 7f6:	88 23       	and	r24, r24
+ 7f8:	11 f0       	breq	.+4      	; 0x7fe <twi_write_byte+0x12>
+ 7fa:	82 e0       	ldi	r24, 0x02	; 2
+ 7fc:	14 c0       	rjmp	.+40     	; 0x826 <twi_write_byte+0x3a>
+    return 0;
+}
+
+char twi_write(char c)
+{
+  TWDR = c;                               // Load DATA into TWDR Register
+ 7fe:	13 b9       	out	0x03, r17	; 3
+  TWCR = (1<<TWINT) | (1<<TWEN);          // Clear TWINT bit in TWCR to start transmission of data
+ 800:	84 e8       	ldi	r24, 0x84	; 132
+ 802:	86 bf       	out	0x36, r24	; 54
+  while (!(TWCR & (1<<TWINT)));           // Wait for TWINT flag set. This indicates that the DATA has been transmitted, and ACK/NACK has been received
+ 804:	06 b6       	in	r0, 0x36	; 54
+ 806:	07 fe       	sbrs	r0, 7
+ 808:	fd cf       	rjmp	.-6      	; 0x804 <twi_write_byte+0x18>
+  TWI_S = (TWSR & 0xF8);
+ 80a:	81 b1       	in	r24, 0x01	; 1
+    return 0;
+}
+
+char twi_write(char c)
+{
+  TWDR = c;                               // Load DATA into TWDR Register
+ 80c:	03 b9       	out	0x03, r16	; 3
+  TWCR = (1<<TWINT) | (1<<TWEN);          // Clear TWINT bit in TWCR to start transmission of data
+ 80e:	84 e8       	ldi	r24, 0x84	; 132
+ 810:	86 bf       	out	0x36, r24	; 54
+  while (!(TWCR & (1<<TWINT)));           // Wait for TWINT flag set. This indicates that the DATA has been transmitted, and ACK/NACK has been received
+ 812:	06 b6       	in	r0, 0x36	; 54
+ 814:	07 fe       	sbrs	r0, 7
+ 816:	fd cf       	rjmp	.-6      	; 0x812 <twi_write_byte+0x26>
+  TWI_S = (TWSR & 0xF8);
+ 818:	81 b1       	in	r24, 0x01	; 1
+ 81a:	88 7f       	andi	r24, 0xF8	; 248
+ 81c:	80 93 8b 00 	sts	0x008B, r24
+  if (TWI_S != MT_DATA_ACK)
+ 820:	88 32       	cpi	r24, 0x28	; 40
+ 822:	21 f0       	breq	.+8      	; 0x82c <twi_write_byte+0x40>
+ 824:	81 e0       	ldi	r24, 0x01	; 1
+  if(twi_write(data)!=0)
+    return 1;
+
+  twi_stop();
+  return 0;
+}
+ 826:	1f 91       	pop	r17
+ 828:	0f 91       	pop	r16
+ 82a:	08 95       	ret
+    return 0;
+}
+
+char twi_stop()
+{
+  TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWSTO);
+ 82c:	84 e9       	ldi	r24, 0x94	; 148
+ 82e:	86 bf       	out	0x36, r24	; 54
+ 830:	80 e0       	ldi	r24, 0x00	; 0
+ 832:	f9 cf       	rjmp	.-14     	; 0x826 <twi_write_byte+0x3a>
+
+00000834 <__udivmodqi4>:
+ 834:	99 1b       	sub	r25, r25
+ 836:	79 e0       	ldi	r23, 0x09	; 9
+ 838:	04 c0       	rjmp	.+8      	; 0x842 <__udivmodqi4_ep>
+
+0000083a <__udivmodqi4_loop>:
+ 83a:	99 1f       	adc	r25, r25
+ 83c:	96 17       	cp	r25, r22
+ 83e:	08 f0       	brcs	.+2      	; 0x842 <__udivmodqi4_ep>
+ 840:	96 1b       	sub	r25, r22
+
+00000842 <__udivmodqi4_ep>:
+ 842:	88 1f       	adc	r24, r24
+ 844:	7a 95       	dec	r23
+ 846:	c9 f7       	brne	.-14     	; 0x83a <__udivmodqi4_loop>
+ 848:	80 95       	com	r24
+ 84a:	08 95       	ret
+
+0000084c <_exit>:
+ 84c:	f8 94       	cli
+
+0000084e <__stop_program>:
+ 84e:	ff cf       	rjmp	.-2      	; 0x84e <__stop_program>
