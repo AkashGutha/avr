@@ -1,0 +1,93 @@
+rump (Real USB Model-M PCB) is Free Software; you can redistribute
+and/or modify it under the terms of the OBDEV lice,nse, as found  
+in the license.txt file.                                          
+                                                                  
+rump is distributed in the hope that it will be useful, but       
+WITHOUT ANY WARRANTY; without even the implied warranty of        
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the     
+OBDEV license for further details.                                
+
+
+Real USB Model-M PCB (rump)
+=================================
+
+This document originally described Spaceman Spiff's Commodore 64 Keyboard;
+it has been updated to (hopefully) more accurately reflect the changes made
+to work with the IBM Model M instead. Might come in handy if you want to add
+support for a new keyboard (say a European Model M, or one of the terminal
+keyboard that had extra keys the 1391401 didn't).
+
+Real USB Model-M PCB (or rump for short) is an implementation of a low-speed
+USB HID device, specifically a keyboard. The physical appearance of the device
+is that of a normal IBM Model M keyboard, but the device works as a USB
+keyboard that can be used with any PC that does not have PS2 ports.
+
+The Model M most people refer to is the IBM Model M #1391401, which consists
+of 101 keys. There is nothing special about this layout, except that, when
+compared to modern keyboards, it does not have any Windows-specific keys.
+
+The keys are all organized in a matrix with 16 rows and 8 columns.
+
+
+Keyboard matrix decoding
+------------------------
+
+The keyboard matrix is decoded by scanning the rows. One by one, the row pins
+on the microcontroller are configured as outputs, and with a low value (0V).
+The other row drivers are configured as inputs.
+
+The column inputs are also configured as inputs, and with the internal pull-
+up resistors enabled. Each column is read in turn and compared to the last 
+values (which are stored in a buffer). When a change is detected, a debounce 
+counter is activated, which will require a number of consecutive reads to all
+return the same value before a report is generated. (This debouncing algorithm
+does not appear to have any detrimental effect on the Model M, even though I
+personally have found the Model M to contain very little bounce.)
+
+I'm not sure if Spiff's scanning rate calculations of 2.2kHz are still accurate.
+The debouncing is certainly not noticeable, with whatever the current scanning
+rate is.
+
+The keyboard matrix hardware of the Model M (much like the C64) is quite simple,
+and the scanning routine is also simple, so no key blocking has been implemented.
+This means that ghosting can easily occur (if 3 keys are depressed at the same
+time, a fourth scan-code may be generated, whose key was never pressed).
+
+
+Special key handling
+--------------------
+
+Spiff wrote some code to handle "special" keys on the C64 keyboard which we
+turned out not to need at all. So it's gone now. If you want to find out more,
+please check out c64key!
+
+
+Model M keyboard matrix
+-----------------------
+
+The table below contains the mapping of the 1391401 keyboard matrix. The table
+has been organized based on the row/column numbers used internally in the 
+Model M (and also in the rump project), and should correspond to the wiring used
+in the original Model M keyboard matrix connectors.
+
+
+       J3.1     J3.2     J3.3     J3.4     J3.5     J3.6     J3.7     J3.8
+J4.1    NC       NC      L-Ctrl    NC       NC       NC      R-Ctrl    NC
+J4.2    NC     L-Shift    NC       NC       NC       NC     R-Shift    NC
+J4.3   Esc      Tab       `~       1        Q        A        Z        NC
+J4.4    NC      Caps      F1       2        W        S        X        NC
+J4.5    F4       F3       F2       3        E        D        C        NC
+J4.6    G        T        5        4        R        F        V        B
+J4.7    F5    Backspace   F9      F10       NC       \|     Enter    Space
+J4.8    H        Y        6        7        U        J        M        N
+J4.9    F6       }]       +=       8        I        K        ,<       NC
+J4.10   NC       F7       F8       9        O        L        .>       NC
+J4.11   '"       {[       -_       0        P        ;        NC       /?
+J4.12   NC       N4      Del      F11       N7       N1    Numlock    Down
+J4.13   N0       N5      Ins      F12       N8       N2       N/     Right
+J4.14   N.       N6      PGUP     PGDN      N9       N3       N*       N-
+J4.15   UP       NC      Home     End       N+    N Enter    Pause    Left
+J4.16  L-Alt     NC       NC    PrtScrn   ScrlLck    NC       NC     R-Alt
+
+
+Copyright (C) 2008 by Chris Lee <clee@mg8.org>

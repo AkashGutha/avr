@@ -1,0 +1,391 @@
+Archive member included because of file (symbol)
+
+c:/winavr/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_exit.o)
+                              c:/winavr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4/crtm8.o (exit)
+c:/winavr/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_clear_bss.o)
+                              Thermometer.o (__do_clear_bss)
+
+Allocating common symbols
+Common symbol       size              file
+
+check_temp          0x1               Thermometer.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00002000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/winavr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4/crtm8.o
+LOAD Thermometer.o
+LOAD OWI.o
+LOAD c:/winavr/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a
+LOAD c:/winavr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4\libc.a
+LOAD c:/winavr/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000      0x382
+ *(.vectors)
+ .vectors       0x00000000       0x26 c:/winavr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4/crtm8.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x00000026                . = ALIGN (0x2)
+                0x00000026                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000026        0x0 linker stubs
+ *(.trampolines*)
+                0x00000026                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000026                __ctors_start = .
+ *(.ctors)
+                0x00000026                __ctors_end = .
+                0x00000026                __dtors_start = .
+ *(.dtors)
+                0x00000026                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000026        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4/crtm8.o
+                0x00000026                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000026        0xc c:/winavr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4/crtm8.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000032       0x10 c:/winavr/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_clear_bss.o)
+                0x00000032                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000042        0x4 c:/winavr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4/crtm8.o
+ *(.init9)
+ *(.text)
+ .text          0x00000046        0x2 c:/winavr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4/crtm8.o
+                0x00000046                __vector_1
+                0x00000046                __vector_12
+                0x00000046                __bad_interrupt
+                0x00000046                __vector_6
+                0x00000046                __vector_3
+                0x00000046                __vector_11
+                0x00000046                __vector_13
+                0x00000046                __vector_17
+                0x00000046                __vector_7
+                0x00000046                __vector_5
+                0x00000046                __vector_4
+                0x00000046                __vector_9
+                0x00000046                __vector_2
+                0x00000046                __vector_15
+                0x00000046                __vector_14
+                0x00000046                __vector_10
+                0x00000046                __vector_16
+                0x00000046                __vector_18
+ .text          0x00000048      0x138 Thermometer.o
+                0x00000048                port_init
+                0x000000e6                DS1820_ReadTemperature
+                0x0000005c                timer1_init
+                0x000000a8                init_devices
+                0x0000016a                main
+                0x0000007e                __vector_8
+ .text          0x00000180      0x1fe OWI.o
+                0x000002f0                OWI_ComputeCRC8
+                0x00000340                OWI_CheckRomCRC
+                0x00000270                OWI_SendByte
+                0x0000029c                OWI_ReceiveByte
+                0x000001c6                OWI_WriteBit0
+                0x000002ca                OWI_ReadRom
+                0x00000196                OWI_WriteBit1
+                0x00000232                OWI_DetectPresence
+                0x00000314                OWI_ComputeCRC16
+                0x00000180                OWI_Init
+                0x000001f6                OWI_ReadBit
+                0x000002c2                OWI_SkipRom
+ .text          0x0000037e        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_exit.o)
+ .text          0x0000037e        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_clear_bss.o)
+                0x0000037e                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x0000037e        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_exit.o)
+ .text.libgcc   0x0000037e        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_clear_bss.o)
+                0x0000037e                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0000037e        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_exit.o)
+                0x0000037e                exit
+                0x0000037e                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0000037e        0x4 c:/winavr/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00000382                _etext = .
+
+.data           0x00800060        0x0 load address 0x00000382
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4/crtm8.o
+ .data          0x00800060        0x0 Thermometer.o
+ .data          0x00800060        0x0 OWI.o
+ .data          0x00800060        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_exit.o)
+ .data          0x00800060        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_clear_bss.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800060                . = ALIGN (0x2)
+                0x00800060                _edata = .
+                0x00800060                PROVIDE (__data_end, .)
+
+.bss            0x00800060        0x4
+                0x00800060                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800060        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr4/crtm8.o
+ .bss           0x00800060        0x3 Thermometer.o
+                0x00800060                temperature
+ .bss           0x00800063        0x0 OWI.o
+ .bss           0x00800063        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_exit.o)
+ .bss           0x00800063        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.2/avr4\libgcc.a(_clear_bss.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x00800063        0x1 Thermometer.o
+                0x00800063                check_temp
+                0x00800064                PROVIDE (__bss_end, .)
+                0x00000382                __data_load_start = LOADADDR (.data)
+                0x00000382                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800064        0x0
+                0x00800064                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800064                PROVIDE (__noinit_end, .)
+                0x00800064                _end = .
+                0x00800064                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x40
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 Thermometer.o
+ .debug_aranges
+                0x00000020       0x20 OWI.o
+
+.debug_pubnames
+                0x00000000      0x17f
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x93 Thermometer.o
+ .debug_pubnames
+                0x00000093       0xec OWI.o
+
+.debug_info     0x00000000      0x873
+ *(.debug_info)
+ .debug_info    0x00000000      0x1aa Thermometer.o
+ .debug_info    0x000001aa      0x6c9 OWI.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0x2f1
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0xf0 Thermometer.o
+ .debug_abbrev  0x000000f0      0x201 OWI.o
+
+.debug_line     0x00000000      0x747
+ *(.debug_line)
+ .debug_line    0x00000000      0x2d7 Thermometer.o
+ .debug_line    0x000002d7      0x470 OWI.o
+
+.debug_frame    0x00000000      0x140
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x70 Thermometer.o
+ .debug_frame   0x00000070       0xd0 OWI.o
+
+.debug_str      0x00000000      0x271
+ *(.debug_str)
+ .debug_str     0x00000000      0x104 Thermometer.o
+                                0x14a (size before relaxing)
+ .debug_str     0x00000104      0x16d OWI.o
+                                0x222 (size before relaxing)
+
+.debug_loc      0x00000000      0x2ab
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x31 Thermometer.o
+ .debug_loc     0x00000031      0x27a OWI.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(Thermometer.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000       0x30
+ .debug_ranges  0x00000000       0x30 OWI.o
