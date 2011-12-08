@@ -1,0 +1,4 @@
+h - hello. -> world.
+s - s<code_nr><ir_code><key_code>. -> ok.
+r - r<code_nr>. -> r<code_nr><ir_code><key_code>.
+b - bye. -> bye.
