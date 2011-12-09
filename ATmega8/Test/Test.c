@@ -1,21 +1,33 @@
-#include <avr/io.h>
-#include <avr/sleep.h>
-#include <avr/interrupt.h>
-#include <string.h>
 #include <avr/eeprom.h>
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include <avr/sleep.h>
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_CODE_COUNT	50
+unsigned char USED_CODE_COUNT = MAX_CODE_COUNT;
+
+typedef struct
+{
+	uint32_t ir_code;
+	uint16_t key_code;
+}
+RemoteCode;
+
+RemoteCode EEMEM EEPROMCodes[MAX_CODE_COUNT];
+RemoteCode Codes[MAX_CODE_COUNT] = {};
 
 static char tx_buffer[16] = "";
 static char rx_buffer[16] = "";
-
 unsigned char tx_pos = 0;
 unsigned char rx_pos = 0;
-
-unsigned char buf[10] = {};
+unsigned char buf[10] = "";
 
 void port_init()
 {
 	DDRC = 0x3F;
-	PORTC = 2;
+	PORTC = 1;
 }
 
 void uart_init()
@@ -64,19 +76,65 @@ char HexToByte(char *str, char start, char count)
 	unsigned char j = 0;
 	for(i = start; i <= start + count; i += 2)
 	{
-		buf[j] = (str[i] - 48) * 16 + (str[i+1] - 48);
+		char a = (str[i] < 60 ) ? (str[i] - 48) : (str[i] - 55);
+		char b = (str[i+1] < 60 ) ? (str[i+1] - 48) : (str[i+1] - 55);
+		buf[j] = a * 16 + b;
 		j++;
 	}
-	return j;
+	return j-1;
 }
 
-// s<nn><cccccc><kkkk>
-// nn     = index,    2 bytes
-// cccccc = IR code,  6 bytes
-// kkkk   = key code, 4 bytes
+//char ByteToHex(char *str, char start, char count)
+//{
+//	unsigned char i = 0;
+//	unsigned char j = 0;
+//	for(i = start; i <= start + count; i ++)
+//	{
+//		char a = str[i]
+//		char a = (str[i] < 60 ) ? (str[i] - 48) : (str[i] - 55);
+//		char b = (str[i+1] < 60 ) ? (str[i+1] - 48) : (str[i+1] - 55);
+//		buf[j] = a * 16 + b;
+//		j++;
+//	}
+//	return j-1;
+//}
+
+// s<nn><cccccccc><kkkk>
+// nn       = index,    2 bytes - 1 hex char
+// cccccccc = IR code,  8 bytes - 4 hex char
+// kkkk     = key code, 4 bytes - 2 hex char
 void SetData()
 {
-	char i = HexToByte(rx_buffer, 3, 6);
+	unsigned char addr = 0;
+	unsigned char count = 0;
+
+	HexToByte(rx_buffer, 1, 2);
+	addr = buf[0];
+	count = HexToByte(rx_buffer, 3, 12);
+	if(count == 6)
+	{
+		eeprom_write_block((void*)&buf, (void*)&EEPROMCodes[addr], 6);
+		Codes[addr].ir_code = eeprom_read_dword(&EEPROMCodes[addr].ir_code);
+		Codes[addr].key_code = eeprom_read_word(&EEPROMCodes[addr].key_code);
+		if(Codes[addr].ir_code == 0)
+			USED_CODE_COUNT = addr;
+	}
+	send_message("ok.");
+}
+
+void GetData()
+{
+	unsigned char addr = 0;
+
+	HexToByte(rx_buffer, 1, 2);
+	addr = buf[0];
+	if(addr < USED_CODE_COUNT)
+	{
+		sprintf((char*)&tx_buffer, "s%02X%08lX%04X.", addr, Codes[addr].ir_code, Codes[addr].key_code);
+		send_message(tx_buffer);
+	}
+	else
+		send_message("ERROR.");
 }
 
 void receive_message()
@@ -86,7 +144,23 @@ void receive_message()
 		case 'h': Connect(); break;
 		case 'b': Disconnect(); break;
 		case 's': SetData(); break;
+		case 'r': GetData(); break;
 		default : break;
+	}
+}
+
+void codes_init()
+{
+	unsigned char i = 0;
+	for( i = 0; i < MAX_CODE_COUNT; i++ )
+	{
+		Codes[i].ir_code = eeprom_read_dword(&EEPROMCodes[i].ir_code);
+		Codes[i].key_code = eeprom_read_word(&EEPROMCodes[i].key_code);
+		if(Codes[i].ir_code == 0)
+		{
+			USED_CODE_COUNT = i;
+			break;
+		}
 	}
 }
 
@@ -99,6 +173,8 @@ int main()
 	port_init();
 	uart_init();
 	sei();
+	codes_init();
+	PORTC = 2;
 
 	while (1)
 	{

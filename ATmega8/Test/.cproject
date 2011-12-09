@@ -115,9 +115,18 @@
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 		<project id="Test.de.innot.avreclipse.project.winavr.elf_2.1.0.1555265845" name="AVR Cross Target Application" projectType="de.innot.avreclipse.project.winavr.elf_2.1.0"/>
 	</storageModule>
+	<storageModule moduleId="refreshScope" versionNumber="1">
+		<resource resourceType="PROJECT" workspacePath="/Test"/>
+	</storageModule>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="de.innot.avreclipse.configuration.app.debug.106486580;de.innot.avreclipse.configuration.app.debug.106486580.;de.innot.avreclipse.tool.compiler.winavr.app.debug.833824691;de.innot.avreclipse.compiler.winavr.input.2082558068">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="de.innot.avreclipse.core.AVRGCCManagedMakePerProjectProfileC"/>
+		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="de.innot.avreclipse.configuration.app.release.795876424;de.innot.avreclipse.configuration.app.release.795876424.">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="de.innot.avreclipse.core.AVRGCCManagedMakePerProjectProfileC"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="de.innot.avreclipse.configuration.app.debug.106486580;de.innot.avreclipse.configuration.app.debug.106486580.">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="de.innot.avreclipse.core.AVRGCCManagedMakePerProjectProfileC"/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="de.innot.avreclipse.configuration.app.release.795876424;de.innot.avreclipse.configuration.app.release.795876424.;de.innot.avreclipse.tool.compiler.winavr.app.release.225842150;de.innot.avreclipse.compiler.winavr.input.1602937781">
